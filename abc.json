@@ -1,0 +1,49 @@
+{
+    "name": "build-demo",
+    "type": "alinw",
+    "builder": "alinw",
+    "options": {
+        "type": "uxcore",
+        "pages": true,
+        "libraries": {
+            "Uxcore": {
+                "output": "uxcore.js",
+                "mappings": {
+                    "Button": "uxcore-button",
+                    "Calendar": "uxcore-calendar",
+                    "CheckboxGroup": "uxcore-checkbox-group",
+                    "Collapse": "uxcore-collapse",
+                    "Const": "uxcore-const@0.0.1",
+                    "Crumb": "uxcore-crumb",
+                    "Dialog": "uxcore-dialog",
+                    "Dropdown": "uxcore-dropdown",
+                    "Form": "uxcore-form",
+                    "Formatter": "uxcore-formatter",
+                    "Grid": "uxcore-grid",
+                    "Layout": "uxcore-layout",
+                    "Mention": "uxcore-mention",
+                    "Menu": "uxcore-menu",
+                    "MultiSelect": "uxcore-multi-select",
+                    "Pagination": "uxcore-pagination",
+                    "Popover": "uxcore-popover",
+                    "Progress": "uxcore-progress",
+                    "Radiogroup": "uxcore-radiogroup",
+                    "Select2": "uxcore-select2",
+                    "Steps": "uxcore-steps",
+                    "Table": "uxcore-table",
+                    "Tabs": "uxcore-tabs",
+                    "Tinymce": "uxcore-tinymce",
+                    "Tooltip": "uxcore-tooltip",
+                    "Totop": "uxcore-totop",
+                    "Transfer": "uxcore-transfer",
+                    "Tree": "uxcore-tree",
+                    "Uploader": "uxcore-uploader",
+                    "Validator": "uxcore-validator",
+                    "EmployeeSearch": "@ali/uxcore-employee-search",
+                    "FisGrid": "@ali/uxcore-fis-grid",
+                    "Hovercard": "@ali/uxcore-hovercard"
+                }
+            }
+        }
+    }
+}

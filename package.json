@@ -1,0 +1,29 @@
+{
+  "name": "demo",
+  "author": "biangang.bg",
+  "version": "0.1.0",
+  "description": "demo for uxcore components",
+  "keywords": [
+    "demo",
+    "uxcore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "gulp server",
+    "build": "gulp"
+  },
+  "homepage": "",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "i18n-helper": "~1.1.1",
+    "react-mixin": "~1.7.0",
+    "react-router": "~2.0.1"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0"
+  }
+}

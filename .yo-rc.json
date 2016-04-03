@@ -1,0 +1,17 @@
+{
+  "generator-alinw": {
+    "ctx": {
+      "type": "uxcore",
+      "name": "build-demo",
+      "description": "build-demo",
+      "family": "platform",
+      "author": "biangang.bg",
+      "version": "0.1.0",
+      "homepage": "",
+      "repository": "",
+      "keywords": "build-demo",
+      "library": true,
+      "skipInstall": false
+    }
+  }
+}

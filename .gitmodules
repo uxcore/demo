@@ -1,0 +1,3 @@
+[submodule "src/app/kuma-base"]
+	path = src/app/kuma-base
+	url = git@github.com:uxcore/kuma-base.git
