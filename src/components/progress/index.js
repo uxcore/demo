@@ -1,4 +1,4 @@
-const {Progress} = Uxcore;
+const {Progress, Button} = Uxcore;
 const {Line, Circle} = Progress;
 
 class Demo extends React.Component {
@@ -28,8 +28,9 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <p>标准的进度条</p>
+                <h2>进度条</h2>
+                <h3>标准的进度条</h3>
+                <div className="demo-box">
                     <Line percent={30} />
                     <Line percent={70} status="exception" />
                     <Line percent={100} />
@@ -39,22 +40,22 @@ class Demo extends React.Component {
                     <Circle percent={100} status="success" />
                     <Circle percent={50} showInfo={false} />
                 </div>
-                <div style={{ width: 170 }}>
-                    <p>适合放在较狭窄的区域内。</p>
+                <h3>适合放在较狭窄的区域内。</h3>
+                <div className="demo-box" style={{ width: 170 }}>
                     <Line percent={30} strokeWidth={5} />
                     <Line percent={70} strokeWidth={5} status="exception" />
                     <Line percent={100} strokeWidth={5} />
                 </div>
-                <div>
-                    <p>动态展示。</p>
+                <h3>动态展示。</h3>
+                <div className="demo-box">
                     <Line percent={this.state.percent} />
                     <Circle percent={this.state.percent} />
-                    <button className="kuma-button kuma-button-secondary kuma-button-sm" onClick={this.decline.bind(this)}>
+                    <Button type="secondary" size="small" onClick={this.decline.bind(this)}>
                         <i className="kuma-icon kuma-icon-stop"></i>
-                    </button>
-                    <button className="kuma-button-secondary kuma-button-sm" onClick={this.increase.bind(this)}>
+                    </Button>
+                    <Button type="secondary" size="small" onClick={this.increase.bind(this)}>
                         <i className="kuma-icon kuma-icon-follow"></i>
-                    </button>
+                    </Button>
                 </div>
             </div>
         );

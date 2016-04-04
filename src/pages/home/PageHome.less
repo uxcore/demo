@@ -1,16 +1,38 @@
-.sidenav {
-    float: left;
-    width: 150px;
+.container {
     background-color: #343D50;
-    li {
-        padding-left: 10px;
-        height: 32px;
-        line-height: 32px;
-        a {
-            color: #9CA3A7;
+    .sidenav {
+        float: left;
+        width: 150px;
+        li {
+            padding-left: 10px;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
+            &:hover {
+                background-color: #4e5c78;
+            }
+            a {
+                display: block;
+                color: #9CA3A7;
+            }
         }
     }
-}
-.content {
-    margin-left: 150px;
+    .content {
+        margin-left: 150px;
+        background-color: #fff;
+        > div {
+            padding: 10px 20px;
+        }
+        h2 {
+            font-size: 36px;
+            line-height: 2;
+        }
+        h3 {
+            font-size: 24px;
+            line-height: 2;
+        }
+        .demo-box {
+            margin: 20px 0;
+        }
+    }
 }
