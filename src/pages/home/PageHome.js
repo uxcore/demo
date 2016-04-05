@@ -31,7 +31,8 @@ class Page extends React.Component {
     
     render() {
         return (
-            <div className="container">
+            <div className="container fn-clear">
+                <div className="content" ref="content"><div style={{minHeight: document.documentElement.clientHeight}}>{this.props.children}</div></div>
                 <ul className="sidenav" ref="nav">
                     <li><Link to="/grid">栅格系统</Link></li>
                     <li><Link to="/typography">文字-排版</Link></li>
@@ -48,7 +49,6 @@ class Page extends React.Component {
                     <li><Link to="/breadcrumb">面包屑</Link></li>
                     <li><Link to="/tags">标签</Link></li>
                 </ul>
-                <div className="content" ref="content">{this.props.children}</div>
             </div>
         );
     }

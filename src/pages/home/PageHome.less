@@ -15,8 +15,9 @@ html {
     background-color: #343D50;
     overflow: hidden;
     .sidenav {
-        float: left;
+        float: right;
         width: 150px;
+        height: 100%;
         background-color: #343D50;
         li {
             padding-left: 10px;
@@ -33,13 +34,17 @@ html {
         }
     }
     .content {
-        margin-left: 150px;
+        background-color: #343D50;
+        float: right;
+        width: 100%;
+        padding-left: 150px;
+        margin-left: -150px;
         margin-bottom: -999em;
         padding-bottom: 999em;
         height: 100%;
-        background-color: #fff;
         > div {
-            padding: 10px 20px;
+            padding: 0px 20px;
+            background: white;
         }
         h2 {
             font-size: 36px;
