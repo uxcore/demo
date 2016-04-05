@@ -9,6 +9,7 @@
             "Uxcore": {
                 "output": "uxcore.js",
                 "mappings": {
+                    "Alert": "uxcore-alert",
                     "Button": "uxcore-button",
                     "Calendar": "uxcore-calendar",
                     "CheckboxGroup": "uxcore-checkbox-group",
@@ -38,7 +39,8 @@
                     "Transfer": "uxcore-transfer",
                     "Tree": "uxcore-tree",
                     "Uploader": "uxcore-uploader",
-                    "Validator": "uxcore-validator"
+                    "Validator": "uxcore-validator",
+                    "Message": "uxcore-message"
                 }
             }
         }
