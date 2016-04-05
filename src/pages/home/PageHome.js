@@ -1,7 +1,7 @@
 require('./PageHome.less');
 
 let i18n = require('i18n');
-let {Router, Route, Link} = require('react-router')
+let {Router, Route, Link, IndexRoute} = require('react-router')
 
 let Components = {
     ButtonDemo: require('../../components/button/'),
@@ -12,6 +12,7 @@ let Components = {
     DialogDemo: require('../../components/dialog/'),
     TabsDemo: require('../../components/tabs/'),
     LoadingDemo: require('../../components/loading/'),
+    FormDemo: require('../../components/form')
 }
 
 
@@ -35,6 +36,7 @@ class Page extends React.Component {
                     <li><Link to="/dialog">对话框 Dialog</Link></li>
                     <li><Link to="/tabs">选项卡</Link></li>
                     <li><Link to="/loading">加载</Link></li>
+                    <li><Link to="/form">表单</Link></li>
                 </ul>
                 <div className="content">{this.props.children}</div>
             </div>
@@ -45,6 +47,7 @@ class Page extends React.Component {
 ReactDOM.render(
     <Router>
         <Route path="/" component={Page}>
+            <IndexRoute component={Components.ButtonDemo}></IndexRoute>
             <Route path="button" component={Components.ButtonDemo}></Route>
             <Route path="steps" component={Components.StepsDemo}></Route>
             <Route path="progress" component={Components.ProgressDemo}></Route>
@@ -53,6 +56,7 @@ ReactDOM.render(
             <Route path="dialog" component={Components.DialogDemo}></Route>
             <Route path="tabs" component={Components.TabsDemo}></Route>
             <Route path="loading" component={Components.LoadingDemo}></Route>
+            <Route path="form" component={Components.FormDemo}></Route>
         </Route>
     </Router>
 , document.getElementById('App'));
