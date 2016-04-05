@@ -40,9 +40,6 @@
                     "Tree": "uxcore-tree",
                     "Uploader": "uxcore-uploader",
                     "Validator": "uxcore-validator",
-                    "EmployeeSearch": "@ali/uxcore-employee-search",
-                    "FisGrid": "@ali/uxcore-fis-grid",
-                    "Hovercard": "@ali/uxcore-hovercard",
                     "Message": "uxcore-message"
                 }
             }
