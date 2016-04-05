@@ -5,6 +5,7 @@ let {Router, Route, Link} = require('react-router')
 
 let Components = {
     ButtonDemo: require('../../components/button/'),
+    ColorDemo: require('../../components/colors/'),
     MessageDemo: require('../../components/message/'),
     StepsDemo: require('../../components/steps/'),
     ProgressDemo: require('../../components/progress/'),
@@ -34,6 +35,7 @@ class Page extends React.Component {
                 <ul className="sidenav" ref="nav">
                     <li><Link to="/grid">栅格系统</Link></li>
                     <li><Link to="/typography">文字-排版</Link></li>
+                    <li><Link to="/colors">颜色</Link></li>
                     <li><Link to="/button">按钮</Link></li>
                     <li><Link to="/message">通用信息</Link></li>
                     <li><Link to="/steps">步骤条</Link></li>
@@ -57,6 +59,7 @@ ReactDOM.render(
         <Route path="/" component={Page}>
             <Route path="grid" component={Components.GridDemo}></Route>
             <Route path="typography" component={Components.TypographyDemo}></Route>
+            <Route path="colors" component={Components.ColorDemo}></Route>
             <Route path="button" component={Components.ButtonDemo}></Route>
             <Route path="message" component={Components.MessageDemo}></Route>
             <Route path="steps" component={Components.StepsDemo}></Route>
