@@ -5,6 +5,7 @@ let {Router, Route, Link} = require('react-router')
 
 let Components = {
     ButtonDemo: require('../../components/button/'),
+    MessageDemo: require('../../components/message/'),
     StepsDemo: require('../../components/steps/'),
     ProgressDemo: require('../../components/progress/'),
     TooltipDemo: require('../../components/tooltip/'),
@@ -26,14 +27,15 @@ class Page extends React.Component {
         this.state = {
         };
     }
-
+    
     render() {
         return (
             <div className="container">
-                <ul className="sidenav">
+                <ul className="sidenav" ref="nav">
                     <li><Link to="/grid">栅格系统</Link></li>
                     <li><Link to="/typography">文字-排版</Link></li>
                     <li><Link to="/button">按钮</Link></li>
+                    <li><Link to="/message">通用信息</Link></li>
                     <li><Link to="/steps">步骤条</Link></li>
                     <li><Link to="/progress">进度条</Link></li>
                     <li><Link to="/tooltip">浮动提示</Link></li>
@@ -44,7 +46,7 @@ class Page extends React.Component {
                     <li><Link to="/breadcrumb">面包屑</Link></li>
                     <li><Link to="/tags">标签</Link></li>
                 </ul>
-                <div className="content">{this.props.children}</div>
+                <div className="content" ref="content">{this.props.children}</div>
             </div>
         );
     }
@@ -56,6 +58,7 @@ ReactDOM.render(
             <Route path="grid" component={Components.GridDemo}></Route>
             <Route path="typography" component={Components.TypographyDemo}></Route>
             <Route path="button" component={Components.ButtonDemo}></Route>
+            <Route path="message" component={Components.MessageDemo}></Route>
             <Route path="steps" component={Components.StepsDemo}></Route>
             <Route path="progress" component={Components.ProgressDemo}></Route>
             <Route path="tooltip" component={Components.TooltipDemo}></Route>
