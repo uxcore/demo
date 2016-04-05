@@ -29,16 +29,24 @@ class Demo extends React.Component {
         return (
             <div>
                 <h2>进度条</h2>
-                <h3>标准的进度条</h3>
+                <h3>圆形进度条</h3>
+                <div className="demo-box">
+                    <div style={{display: 'inline-block'}}>
+                        <Circle percent={70} status="exception" />
+                    </div>
+                    <div style={{display: 'inline-block'}}>
+                        <Circle percent={100} status="success" />
+                    </div>
+                    <div style={{display: 'inline-block'}}>
+                        <Circle percent={50} showInfo={true} />
+                    </div>
+                </div>
+                <h3>条形进度条</h3>
                 <div className="demo-box">
                     <Line percent={30} />
                     <Line percent={70} status="exception" />
                     <Line percent={100} />
                     <Line percent={50} showInfo={false} />
-                    <Circle percent={30} />
-                    <Circle percent={70} status="exception" />
-                    <Circle percent={100} status="success" />
-                    <Circle percent={50} showInfo={false} />
                 </div>
                 <h3>适合放在较狭窄的区域内。</h3>
                 <div className="demo-box" style={{ width: 170 }}>

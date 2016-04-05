@@ -1,8 +1,23 @@
+@import '../../app/kuma-base/theme/orange.less';
+
+html {
+    height: 100%;
+    body {
+        height: 100%;
+    }
+}
+#App {
+    height: 100%;
+}
+
 .container {
+    min-height: 100%;
     background-color: #343D50;
+    overflow: hidden;
     .sidenav {
         float: left;
         width: 150px;
+        background-color: #343D50;
         li {
             padding-left: 10px;
             height: 32px;
@@ -19,6 +34,9 @@
     }
     .content {
         margin-left: 150px;
+        margin-bottom: -999em;
+        padding-bottom: 999em;
+        height: 100%;
         background-color: #fff;
         > div {
             padding: 10px 20px;
@@ -35,4 +53,46 @@
             margin: 20px 0;
         }
     }
+}
+
+.typography-demo {
+    .demo-text {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 16px;
+    }
+    .demo-text-primary {
+        color: @text-primary-color;
+    }
+    .demo-text-secondary {
+        color: @text-secondary-color;
+    }
+    .demo-text-thirdary {
+        color: @text-thirdary-color;
+    }
+    .demo-text-disabled {
+        color: @text-disabled-color;
+    }
+    .demo-text-helper {
+        color: @text-helper-color;
+    }
+    .demo-text-danger {
+        color: @text-danger-color;
+    }
+    .demo-text-ali {
+        color: @text-ali-color;
+    }
+}
+
+.grid-item {
+    height: 400px;
+    background: #FFF9F5;
+}
+
+.grid-item-1 {
+    height: 50px;
+    background: #F3F3F3;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px 0;
 }
