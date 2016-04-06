@@ -32,7 +32,7 @@ class Page extends React.Component {
     
     render() {
         return (
-            <div className="container">
+            <div className="container fn-clear">
                 <ul className="sidenav" ref="nav">
                     <li><Link to="/grid">栅格系统</Link></li>
                     <li><Link to="/typography">文字-排版</Link></li>
