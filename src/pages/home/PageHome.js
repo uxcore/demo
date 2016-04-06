@@ -17,7 +17,8 @@ let Components = {
     TypographyDemo: require('../../components/typography/'),
     GridDemo: require('../../components/grid/'),
     BreadcrumbDemo: require('../../components/breadcrumb/'),
-    TagDemo: require('../../components/tags/')
+    TagDemo: require('../../components/tags/'),
+    TableDemo: require('../../components/table/')
 }
 
 
@@ -48,6 +49,7 @@ class Page extends React.Component {
                     <li><Link to="/form">表单</Link></li>
                     <li><Link to="/breadcrumb">面包屑</Link></li>
                     <li><Link to="/tags">标签</Link></li>
+                    <li><Link to="/table">列表</Link></li>
                 </ul>
             </div>
         );
@@ -72,6 +74,7 @@ ReactDOM.render(
             <Route path="form" component={Components.FormDemo}></Route>
             <Route path="breadcrumb" component={Components.BreadcrumbDemo}></Route>
             <Route path="tags" component={Components.TagDemo}></Route>
+            <Route path="table" component={Components.TableDemo}></Route>
         </Route>
     </Router>
 , document.getElementById('App'));
