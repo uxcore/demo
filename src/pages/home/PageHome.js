@@ -19,7 +19,10 @@ let Components = {
     GridDemo: require('../../components/grid/'),
     BreadcrumbDemo: require('../../components/breadcrumb/'),
     TagDemo: require('../../components/tags/'),
-    TableDemo: require('../../components/table/')
+    TableDemo: require('../../components/table/'),
+    CalendarDemo: require('../../components/calendar'),
+    SelectDemo: require('../../components/select'),
+    PaginationDemo: require('../../components/pagination')
 }
 
 
@@ -51,6 +54,9 @@ class Page extends React.Component {
                     <li><Link to="/breadcrumb">面包屑</Link></li>
                     <li><Link to="/tags">标签</Link></li>
                     <li><Link to="/table">列表</Link></li>
+                    <li><Link to="/calendar">日历</Link></li>
+                    <li><Link to="/select">选择器</Link></li>
+                    <li><Link to="/pagination">翻页</Link></li>
                 </ul>
                 <div className="content fn-clear" ref="content">{this.props.children}</div>
             </div>
@@ -78,6 +84,9 @@ ReactDOM.render(
             <Route path="breadcrumb" component={Components.BreadcrumbDemo}></Route>
             <Route path="tags" component={Components.TagDemo}></Route>
             <Route path="table" component={Components.TableDemo}></Route>
+            <Route path="calendar" component={Components.CalendarDemo}></Route>
+            <Route path="select" component={Components.SelectDemo}></Route>
+            <Route path="pagination" component={Components.PaginationDemo}></Route>
         </Route>
     </Router>
 , document.getElementById('App'));
