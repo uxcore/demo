@@ -50,7 +50,7 @@ class Page extends React.Component {
                     <li><Link to="/breadcrumb">面包屑</Link></li>
                     <li><Link to="/tags">标签</Link></li>
                 </ul>
-                <div className="content" ref="content">{this.props.children}</div>
+                <div className="content fn-clear" ref="content">{this.props.children}</div>
             </div>
         );
     }

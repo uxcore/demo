@@ -29,7 +29,7 @@ class FormDemo extends React.Component {
     render() {
         var t = this;
         return (
-            <div className="form">
+            <div className="form demo-box">
                 <Form className="form1">
                     <FormRowTitle jsxtitle="横排" />
                     <Select jsxname="field1" jsxlabel="项目一" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
