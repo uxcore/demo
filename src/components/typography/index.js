@@ -20,7 +20,8 @@ class Demo extends React.Component {
                     <span className="demo-text demo-text-primary">主要文本</span>
                     <span className="demo-text demo-text-secondary">次要文本</span>
                     <span className="demo-text demo-text-thirdary">辅助文本</span>
-                    <span className="demo-text demo-text-disabled">提示，禁用文本</span>
+                    <span className="demo-text demo-text-disabled">禁用文本</span>
+                    <span className="demo-text demo-text-helper">提示文本</span>
                     <span className="demo-text demo-text-ali">阿里橙</span>
                 </div>
             </div>

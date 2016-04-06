@@ -15,6 +15,7 @@ class ButtonDemo extends React.Component {
                     <Button type="primary">primary</Button>
                     <Button type="secondary">secondary</Button>
                     <Button type="outline">outline</Button>
+                    <Button disabled>disabled</Button>
                 </div>
                 <h3>不同尺寸</h3>
                 <div className="demo-box">
