@@ -1,5 +1,5 @@
 const {Steps} = Uxcore;
-const Step = Steps.Step;
+const {Step} = Steps;
 
 let steps = [{
     title: '已完成',

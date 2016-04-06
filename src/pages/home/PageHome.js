@@ -22,7 +22,8 @@ let Components = {
     TableDemo: require('../../components/table/'),
     CalendarDemo: require('../../components/calendar'),
     SelectDemo: require('../../components/select'),
-    PaginationDemo: require('../../components/pagination')
+    PaginationDemo: require('../../components/pagination'),
+    SceneDemo: require('../../components/scene')
 }
 
 
@@ -57,6 +58,7 @@ class Page extends React.Component {
                     <li><Link to="/calendar">日历</Link></li>
                     <li><Link to="/select">选择器</Link></li>
                     <li><Link to="/pagination">翻页</Link></li>
+                    <li><Link to="/scene">实际场景</Link></li>
                 </ul>
                 <div className="content fn-clear" ref="content">{this.props.children}</div>
             </div>
@@ -87,6 +89,7 @@ ReactDOM.render(
             <Route path="calendar" component={Components.CalendarDemo}></Route>
             <Route path="select" component={Components.SelectDemo}></Route>
             <Route path="pagination" component={Components.PaginationDemo}></Route>
+            <Route path="scene" component={Components.SceneDemo}></Route>
         </Route>
     </Router>
 , document.getElementById('App'));

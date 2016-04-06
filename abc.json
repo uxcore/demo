@@ -40,7 +40,9 @@
                     "Tree": "uxcore-tree",
                     "Uploader": "uxcore-uploader",
                     "Validator": "uxcore-validator",
-                    "Message": "uxcore-message"
+                    "Message": "uxcore-message",
+                    "Pickable": "uxcore-pickable",
+                    "PrimaryNav": "@ali/uxcore-primary-nav"
                 }
             }
         }

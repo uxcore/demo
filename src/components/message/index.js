@@ -1,14 +1,12 @@
 const {Alert, Message, Button} = Uxcore;
 
-console.log(Message)
-
 class Demo extends React.Component {
     constructor(props) {
         super(props);
     }
     
     handleClick(type) {
-        Message[type](type, 20);
+        Message[type](type, 3);
     }
     
     render(){
