@@ -5,6 +5,7 @@ let {Router, Route, Link, IndexRoute} = require('react-router')
 
 let Components = {
     ButtonDemo: require('../../components/button/'),
+    ColorDemo: require('../../components/colors/'),
     MessageDemo: require('../../components/message/'),
     StepsDemo: require('../../components/steps/'),
     ProgressDemo: require('../../components/progress/'),
@@ -33,10 +34,10 @@ class Page extends React.Component {
     render() {
         return (
             <div className="container fn-clear">
-                <div className="content" ref="content"><div style={{minHeight: document.documentElement.clientHeight}}>{this.props.children}</div></div>
                 <ul className="sidenav" ref="nav">
                     <li><Link to="/grid">栅格系统</Link></li>
                     <li><Link to="/typography">文字-排版</Link></li>
+                    <li><Link to="/colors">颜色</Link></li>
                     <li><Link to="/button">按钮</Link></li>
                     <li><Link to="/message">通用信息</Link></li>
                     <li><Link to="/steps">步骤条</Link></li>
@@ -51,6 +52,7 @@ class Page extends React.Component {
                     <li><Link to="/tags">标签</Link></li>
                     <li><Link to="/table">列表</Link></li>
                 </ul>
+                <div className="content fn-clear" ref="content">{this.props.children}</div>
             </div>
         );
     }
@@ -62,6 +64,7 @@ ReactDOM.render(
             <IndexRoute component={Components.ButtonDemo}></IndexRoute>
             <Route path="grid" component={Components.GridDemo}></Route>
             <Route path="typography" component={Components.TypographyDemo}></Route>
+            <Route path="colors" component={Components.ColorDemo}></Route>
             <Route path="button" component={Components.ButtonDemo}></Route>
             <Route path="message" component={Components.MessageDemo}></Route>
             <Route path="steps" component={Components.StepsDemo}></Route>
