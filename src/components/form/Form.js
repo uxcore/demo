@@ -15,7 +15,8 @@ let {
     InputFormField: Input,
     SelectFormField: Select,
     OtherFormField: Other,
-    FormRowTitle
+    FormRowTitle,
+    FormRow
 } = Form;
 
 class FormDemo extends React.Component {
@@ -30,6 +31,7 @@ class FormDemo extends React.Component {
         var t = this;
         return (
             <div className="form">
+                <h2>表单</h2>
                 <Form className="form1">
                     <FormRowTitle jsxtitle="横排" />
                     <Select jsxname="field1" jsxlabel="项目一" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
@@ -48,6 +50,23 @@ class FormDemo extends React.Component {
                     <Input verticalAlign={true} jsxname="field40" jsxlabel="项目四" />
                     <Input verticalAlign={true} jsxname="field50" jsxlabel="项目五" />
                     <Other className="other2">
+                        <Button>提交</Button>
+                        <Button type="secondary">重置</Button>
+                    </Other>
+                </Form>
+                <Form className="form2">
+                    <FormRowTitle jsxtitle="并排" />
+                    <FormRow>
+                        <Select jsxname="field100" jsxlabel="项目一" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
+                        <Select jsxname="field200" jsxlabel="项目二" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
+                        <Input jsxname="field300" jsxlabel="项目三" />
+                    </FormRow>
+                    <FormRow>
+                        <Input jsxname="field400" jsxlabel="项目三" />
+                        <Input jsxname="field500" jsxlabel="项目三" />
+                        <Input jsxname="field600" jsxlabel="项目三" />
+                    </FormRow>
+                    <Other className="other3">
                         <Button>提交</Button>
                         <Button type="secondary">重置</Button>
                     </Other>
