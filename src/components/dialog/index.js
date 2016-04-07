@@ -66,6 +66,7 @@ class Demo extends React.Component {
                     <Button type="secondary" size="small" type="secondary" size="small" onClick={this.showDialog.bind(this)}>弹框</Button>
                     <Dialog
                         title={'创建群'}
+                        transitionName="threeFallV"
                         visible={this.state.visible}
                         onOk={this.handleOk.bind(this)}
 					    onCancel={this.handleCancel.bind(this)}>
