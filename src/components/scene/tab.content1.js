@@ -9,6 +9,7 @@ const {
     FormRowTitle,
     FormRow
 } = Form;
+let classnames = require('classnames');
 
 let columns = [
     { dataKey: 'title', title: '标题', width: 200, message: '只是一个标题'},
@@ -34,16 +35,32 @@ let renderProps = {
 class TabContent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            mode: 'edit'
+        }
     }
     
     showDialog() {
+        let me = this;
         Dialog.success({
             title: '提交表单',
-            content: '提交表单啦!'
+            content: '提交表单啦!',
+            onOk: () => {
+                me.setState({
+                    "mode": "view"
+                })
+            }
         });
+    }
+
+    editForm() {
+        this.setState({
+            mode: 'edit'
+        })
     }
     
     render() {
+        let me = this;
         return (
             <div>
                 <Tabs defaultActiveKey="2" type="filter">
@@ -52,7 +69,7 @@ class TabContent extends React.Component {
                     <TabPane tab="筛选3" key="3"></TabPane>
                     <TabPane tab="筛选4" key="4"></TabPane>
                 </Tabs>
-                <Form className="scene-form">
+                <Form className="scene-form" jsxmode={me.state.mode}>
                     <FormRow>
                         <Select jsxname="field100" jsxlabel="项目一" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
                         <Select jsxname="field200" jsxlabel="项目二" jsxdata={{a: '选项1', b: '选项2', c: '选项3'}} />
@@ -64,7 +81,7 @@ class TabContent extends React.Component {
                         <Input jsxname="field600" jsxlabel="项目三" />
                     </FormRow>
                     <Other>
-                        <Button onClick={this.showDialog.bind(this)}>提交</Button>
+                        {me.renderButton()}
                         <Button type="secondary">重置</Button>
                     </Other>
                 </Form>
@@ -73,6 +90,14 @@ class TabContent extends React.Component {
                 </div>
             </div>
         );
+    }
+
+    renderButton() {
+        if (this.state.mode == 'view') {
+            return <Button onClick={this.editForm.bind(this)}>编辑</Button>
+        } else {
+            return <Button onClick={this.showDialog.bind(this)}>提交</Button>
+        }
     }
 }
 
