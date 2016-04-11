@@ -45,7 +45,7 @@ class CalendarDemo extends React.Component {
                 <h2>日历</h2>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>基本</p>
-                    <Calendar locale="en-us" value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <Calendar value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>日期格式</p>
@@ -74,6 +74,16 @@ class CalendarDemo extends React.Component {
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>年份</p>
                     <YearCalendar value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                </div>
+                <div className="kuma-form-field" style={{
+                    width: 400
+                }}>
+                    <p>显示特殊休假和日程</p>
+                    <Calendar value={this.state.value} onSelect={this.onSelect.bind(this)} contentRender={Calendar.util.generateContentRender({
+                        '2016-04-08': 'leave',
+                        '2016-04-10': 'work',
+                        '2016-04-09': 'schedule'
+                    }, 'en')}/>
                 </div>
                 <Button className="calendar-button" onClick={me.handleClick.bind(me)}>changeTime</Button>
             </div>

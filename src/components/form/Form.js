@@ -49,6 +49,7 @@ class FormDemo extends React.Component {
                     <Input verticalAlign={true} jsxname="field30" jsxlabel="项目三" />
                     <Input verticalAlign={true} jsxname="field40" jsxlabel="项目四" />
                     <Input verticalAlign={true} jsxname="field50" jsxlabel="项目五" />
+                    <Input verticalAlign={true} jsxname="field60" jsxlabel="项目六" jsxrules={{validator: function(value) {return value.length <= 5}, errMsg: "不能超过五个字符"}} jsxtips="这里可以用来测试出错" />
                     <Other className="other2">
                         <Button>提交</Button>
                         <Button type="secondary">重置</Button>
