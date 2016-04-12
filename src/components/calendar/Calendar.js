@@ -45,41 +45,41 @@ class CalendarDemo extends React.Component {
                 <h2>日历</h2>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>基本</p>
-                    <Calendar value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <Calendar transitionName="slideUp" value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>日期格式</p>
-                    <Calendar value={this.state.value} format="yyyy/MM/dd" onSelect={this.onSelect.bind(this)} />
+                    <Calendar transitionName="slideUp" value={this.state.value} format="yyyy/MM/dd" onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>选择日期</p>
-                    <Calendar onSelect={this.onSelect.bind(this)} value={this.state.value}/>
+                    <Calendar transitionName="slideUp" onSelect={this.onSelect.bind(this)} value={this.state.value}/>
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>范围</p>
-                    <Calendar disabledDate={disabledDate} value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <Calendar transitionName="slideUp" disabledDate={disabledDate} value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>时间选择</p>
-                    <Calendar hasTrigger={true} showTime={true} format="yyyy-MM-dd HH:mm:ss" value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <Calendar transitionName="slideUp" hasTrigger={true} showTime={true} format="yyyy-MM-dd HH:mm:ss" value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>禁用</p>
-                    <Calendar value={this.state.value} disabled={true} onSelect={this.onSelect.bind(this)}/>
+                    <Calendar transitionName="slideUp" value={this.state.value} disabled={true} onSelect={this.onSelect.bind(this)}/>
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>月份</p>
-                    <MonthCalendar value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <MonthCalendar transitionName="slideUp" value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{width: 400}}>
                     <p>年份</p>
-                    <YearCalendar value={this.state.value} onSelect={this.onSelect.bind(this)} />
+                    <YearCalendar transitionName="slideUp" value={this.state.value} onSelect={this.onSelect.bind(this)} />
                 </div>
                 <div className="kuma-form-field" style={{
                     width: 400
                 }}>
                     <p>显示特殊休假和日程</p>
-                    <Calendar value={this.state.value} onSelect={this.onSelect.bind(this)} contentRender={Calendar.util.generateContentRender({
+                    <Calendar transitionName="slideUp" value={this.state.value} onSelect={this.onSelect.bind(this)} contentRender={Calendar.util.generateContentRender({
                         '2016-04-08': 'leave',
                         '2016-04-10': 'work',
                         '2016-04-09': 'schedule'

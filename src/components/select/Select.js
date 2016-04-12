@@ -113,7 +113,7 @@ class SelectDemo extends React.Component {
                 <h2>选择器</h2>
                 <div id="container">
                     <p>基本使用:</p>
-                    <Select defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
+                    <Select transitionName="slideUp" defaultValue="lucy" style={{width:200}} onChange={me.handleChange.bind(me)} allowClear={true} getPopupContainer={function() {
                         return document.getElementById("container")
                     }} dropdownClassName="kuma-select2-selected-has-icon">
                         <Option value="jack">Jack</Option>
@@ -122,26 +122,26 @@ class SelectDemo extends React.Component {
                         <Option value="yiminghe">yiminghe</Option>
                     </Select>
                     <p>带搜索框:</p>
-                    <Select defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}>
                         <Option value="jack">jack</Option>
                         <Option value="lucy">lucy</Option>
                         <Option value="disabled" disabled>disabled</Option>
                         <Option value="yiminghe">yiminghe</Option>
                     </Select>
                     <p>多选:</p>
-                    <Select multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)}>
                         {children}
                     </Select>
                     <p>多选提示，提示项根据 ajax 获得</p>
-                    <Select multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={me.handleChange.bind(me)}>
                         {ajaxOptions}
                     </Select>
                     <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
-                    <Select style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
                         {tagChildren}
                     </Select>
                     <p>智能提示</p>
-                    <Select combobox
+                    <Select transitionName="slideUp" combobox
                       style={{width:200}}
                       onChange={this.handleMailChange.bind(this)}
                       filterOption={false}
@@ -149,15 +149,15 @@ class SelectDemo extends React.Component {
                       {this.state.options}
                     </Select>
                     <p>联动</p>
-                    <Select defaultValue={provinceData[0]} style={{width:150}} onChange={this.handleProvinceChange.bind(this)}>
+                    <Select transitionName="slideUp" defaultValue={provinceData[0]} style={{width:150}} onChange={this.handleProvinceChange.bind(this)}>
                         {provinceOptions}
                     </Select>
                     &nbsp;
-                    <Select value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
+                    <Select transitionName="slideUp" value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
                         {cityOptions}
                     </Select>
                     <p>Combo 模式</p>
-                    <Select combobox={true}>
+                    <Select transitionName="slideUp" combobox={true}>
                         {cityOptions}
                     </Select>
                 </div>

@@ -21,7 +21,8 @@
     "classnames": "^2.1.2",
     "i18n-helper": "~1.1.1",
     "react-mixin": "~1.7.0",
-    "react-router": "~2.0.1"
+    "react-router": "~2.0.1",
+    "uxcore-animate": "~0.1.0"
   },
   "devDependencies": {
     "gulp": "~3.9.0",
