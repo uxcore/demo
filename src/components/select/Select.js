@@ -122,22 +122,22 @@ class SelectDemo extends React.Component {
                         <Option value="yiminghe">yiminghe</Option>
                     </Select>
                     <p>带搜索框:</p>
-                    <Select transitionName="slideUp" defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" defaultValue="lucy" showSearch={true} style={{width:200}} searchPlaceholder="输入" onChange={me.handleChange.bind(me)}  dropdownClassName="kuma-select2-selected-has-icon">
                         <Option value="jack">jack</Option>
                         <Option value="lucy">lucy</Option>
                         <Option value="disabled" disabled>disabled</Option>
                         <Option value="yiminghe">yiminghe</Option>
                     </Select>
                     <p>多选:</p>
-                    <Select transitionName="slideUp" multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" multiple style={{width:400}} defaultValue={['a10', 'c12']} onChange={me.handleChange.bind(me)} dropdownClassName="kuma-select2-selected-has-icon">
                         {children}
                     </Select>
                     <p>多选提示，提示项根据 ajax 获得</p>
-                    <Select transitionName="slideUp" multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" multiple filterOption={false} style={{width: 400}} onSearch={me.handleSearch.bind(me)} onChange={me.handleChange.bind(me)}  dropdownClassName="kuma-select2-selected-has-icon">
                         {ajaxOptions}
                     </Select>
                     <p>标签:(标签的意义是，用户可以通过键盘自己输入值，而不局限于传入的选项)</p>
-                    <Select transitionName="slideUp" style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)}>
+                    <Select transitionName="slideUp" style={{width: '100%'}} searchPlaceholder="标签模式" tags onChange={me.handleChange.bind(me)} dropdownClassName="kuma-select2-selected-has-icon">
                         {tagChildren}
                     </Select>
                     <p>智能提示</p>
@@ -145,19 +145,20 @@ class SelectDemo extends React.Component {
                       style={{width:200}}
                       onChange={this.handleMailChange.bind(this)}
                       filterOption={false}
-                      searchPlaceholder="请输入账户名">
+                      searchPlaceholder="请输入账户名"
+                      dropdownClassName="kuma-select2-selected-has-icon">
                       {this.state.options}
                     </Select>
                     <p>联动</p>
-                    <Select transitionName="slideUp" defaultValue={provinceData[0]} style={{width:150}} onChange={this.handleProvinceChange.bind(this)}>
+                    <Select transitionName="slideUp" defaultValue={provinceData[0]} style={{width:150}} onChange={this.handleProvinceChange.bind(this)} dropdownClassName="kuma-select2-selected-has-icon">
                         {provinceOptions}
                     </Select>
                     &nbsp;
-                    <Select transitionName="slideUp" value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)}>
+                    <Select transitionName="slideUp" value={this.state.secondCity} style={{width:150}} onChange={this.onSecondCityChange.bind(this)} dropdownClassName="kuma-select2-selected-has-icon">
                         {cityOptions}
                     </Select>
                     <p>Combo 模式</p>
-                    <Select transitionName="slideUp" combobox={true}>
+                    <Select transitionName="slideUp" combobox={true} dropdownClassName="kuma-select2-selected-has-icon">
                         {cityOptions}
                     </Select>
                 </div>

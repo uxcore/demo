@@ -63,7 +63,7 @@ class TabContent extends React.Component {
         let me = this;
         return (
             <div>
-                <Tabs defaultActiveKey="2" type="filter">
+                <Tabs defaultActiveKey="2" type="brick">
                     <TabPane tab="筛选1" key="1"></TabPane>
                     <TabPane tab="筛选2" key="2"></TabPane>
                     <TabPane tab="筛选3" key="3"></TabPane>
