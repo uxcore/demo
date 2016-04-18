@@ -3158,7 +3158,6 @@ a:disabled {
   -webkit-user-select: none;
   background-color: #2599f2;
   color: white;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-header > a {
   font-weight: bold;
@@ -3176,9 +3175,17 @@ a:disabled {
   position: absolute;
   left: 25px;
 }
+.kuma-calendar-header .kuma-calendar-prev-month-btn:after {
+  content: '\e644';
+  font-size: 16px;
+}
 .kuma-calendar-header .kuma-calendar-next-month-btn {
   position: absolute;
   right: 25px;
+}
+.kuma-calendar-header .kuma-calendar-next-month-btn:after {
+  content: '\e643';
+  font-size: 16px;
 }
 .kuma-calendar-ym-select,
 .kuma-calendar-my-select {
@@ -3206,15 +3213,15 @@ a:disabled {
 .kuma-calendar-prev-year-btn,
 .kuma-calendar-next-year-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   cursor: pointer;
   color: white;
   width: 24px;
   height: 24px;
   border-radius: 3px;
   font-size: 16px;
-  display: inline-block;
   line-height: 24px;
+  text-indent: 999em;
 }
 .kuma-calendar-prev-month-btn:hover,
 .kuma-calendar-next-month-btn:hover,
@@ -3223,11 +3230,29 @@ a:disabled {
   background: #4eadf5;
   color: white;
 }
+.kuma-calendar-prev-month-btn:after,
+.kuma-calendar-next-month-btn:after,
+.kuma-calendar-prev-year-btn:after,
+.kuma-calendar-next-year-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
+}
 .kuma-calendar-next-year-btn {
   right: 0;
 }
+.kuma-calendar-next-year-btn:after {
+  content: '\e615';
+}
 .kuma-calendar-prev-year-btn {
   left: 0;
+}
+.kuma-calendar-prev-year-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-calendar-body {
   padding: 9px 10px 10px;
@@ -3257,6 +3282,10 @@ a:disabled {
 .kuma-calendar-column-header .kuma-calendar-column-header-inner {
   display: block;
   font-weight: normal;
+  color: #2599f2;
+}
+.kuma-calendar-column-header .kuma-calendar-column-header-inner.weekend {
+  color: #92c7f0;
 }
 .kuma-calendar-week-number-header .kuma-calendar-column-header-inner {
   display: none;
@@ -3389,7 +3418,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-time-panel-body {
   padding: 9px 10px 10px;
@@ -3459,7 +3487,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-month-panel-header > a {
   font-weight: bold;
@@ -3474,23 +3501,47 @@ a:disabled {
 .kuma-calendar-month-panel-prev-year-btn,
 .kuma-calendar-month-panel-next-year-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   line-height: 24px;
   width: 24px;
   padding: 0px;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-month-panel-prev-year-btn:hover,
 .kuma-calendar-month-panel-next-year-btn:hover {
   color: white;
   background: #4eadf5;
 }
+.kuma-calendar-month-panel-prev-year-btn:after,
+.kuma-calendar-month-panel-next-year-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
+}
 .kuma-calendar-month-panel-prev-year-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-month-panel-prev-year-btn:after {
+  content: '\e616';
+}
+.kuma-calendar-month-panel-next-year-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  right: 10px;
+}
+.kuma-calendar-month-panel-next-year-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-month-panel .kuma-calendar-month-panel-year-select {
   width: 180px;
@@ -3510,13 +3561,6 @@ a:disabled {
 .kuma-calendar-month-panel-year-select-arrow {
   display: none;
 }
-.kuma-calendar-month-panel-next-year-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  right: 0;
-}
 .kuma-calendar-month-panel-body {
   padding: 9px 10px 10px;
 }
@@ -3534,11 +3578,11 @@ a:disabled {
   width: 46px;
   margin: 0 auto;
   color: #666;
-  border-radius: 3px;
-  height: 36px;
+  border-radius: 23px;
+  height: 46px;
   padding: 0;
   background: transparent;
-  line-height: 36px;
+  line-height: 46px;
   text-align: center;
 }
 .kuma-calendar-month-panel-cell .kuma-calendar-month-panel-month:hover {
@@ -3555,6 +3599,9 @@ a:disabled {
 .kuma-calendar-month-panel-selected-cell .kuma-calendar-month-panel-month {
   background: #2599f2;
   color: #fff;
+}
+.kuma-calendar-month-panel-selected-cell .kuma-calendar-month-panel-month:hover {
+  background: #2599f2;
 }
 .kuma-calendar-year-panel {
   left: 0;
@@ -3580,7 +3627,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-year-panel-header > a {
   font-weight: bold;
@@ -3604,22 +3650,35 @@ a:disabled {
 .kuma-calendar-year-panel-prev-decade-btn,
 .kuma-calendar-year-panel-next-decade-btn {
   position: absolute;
-  top: 0;
   line-height: 24px;
-  top: 7px;
+  top: 9px;
   width: 24px;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-year-panel-prev-decade-btn:hover,
 .kuma-calendar-year-panel-next-decade-btn:hover {
   background: #4eadf5;
+}
+.kuma-calendar-year-panel-prev-decade-btn:after,
+.kuma-calendar-year-panel-next-decade-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
 }
 .kuma-calendar-year-panel-prev-decade-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-year-panel-prev-decade-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-year-panel .kuma-calendar-year-panel-decade-select {
   width: 180px;
@@ -3632,7 +3691,10 @@ a:disabled {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  right: 0;
+  right: 10px;
+}
+.kuma-calendar-year-panel-next-decade-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-year-panel-body {
   padding: 9px 10px 10px;
@@ -3651,11 +3713,11 @@ a:disabled {
   width: 46px;
   margin: 0 auto;
   color: #666;
-  border-radius: 3px;
-  height: 36px;
+  border-radius: 46px;
+  height: 46px;
   padding: 0;
   background: transparent;
-  line-height: 36px;
+  line-height: 46px;
   text-align: center;
 }
 .kuma-calendar-year-panel-year:hover {
@@ -3676,13 +3738,8 @@ a:disabled {
 }
 .kuma-calendar-year-panel-last-decade-cell .kuma-calendar-year-panel-year:before,
 .kuma-calendar-year-panel-next-decade-cell .kuma-calendar-year-panel-year:before {
-  content: ">";
-  font-family: "iconfont" !important;
-}
-.kuma-calendar-year-panel-last-decade-cell .kuma-calendar-year-panel-year {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  content: '\e645';
+  font-family: 'kuma' !important;
 }
 .kuma-calendar-decade-panel {
   left: 0;
@@ -3708,7 +3765,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-decade-panel-header > a {
   font-weight: bold;
@@ -3727,28 +3783,45 @@ a:disabled {
 .kuma-calendar-decade-panel-prev-century-btn,
 .kuma-calendar-decade-panel-next-century-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   line-height: 24px;
   display: inline-block;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-decade-panel-prev-century-btn:hover,
 .kuma-calendar-decade-panel-next-century-btn:hover {
   background: #4eadf5;
+}
+.kuma-calendar-decade-panel-prev-century-btn:after,
+.kuma-calendar-decade-panel-next-century-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
 }
 .kuma-calendar-decade-panel-prev-century-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-decade-panel-prev-century-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-decade-panel-next-century-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  right: 0;
+  right: 10px;
+}
+.kuma-calendar-decade-panel-next-century-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-decade-panel-body {
   padding: 9px 10px 10px;
@@ -3791,13 +3864,8 @@ a:disabled {
 }
 .kuma-calendar-decade-panel-last-century-cell .kuma-calendar-decade-panel-decade:before,
 .kuma-calendar-decade-panel-next-century-cell .kuma-calendar-decade-panel-decade:before {
-  content: ">";
-  font-family: "iconfont" !important;
-}
-.kuma-calendar-decade-panel-last-century-cell .kuma-calendar-decade-panel-decade {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  content: '\e645';
+  font-family: 'kuma' !important;
 }
 .kuma-time-picker {
   display: inline-block;
@@ -4386,6 +4454,9 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 .kuma-page-options-quick-jumper input:hover {
   border-color: #ccc;
 }
+.kuma-page-options-quick-jumper input:focus {
+  background-color: #fff;
+}
 .kuma-page-simple .kuma-page-prev,
 .kuma-page-simple .kuma-page-next {
   font-size: 10px;
@@ -4493,11 +4564,12 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 }
 .kuma-select2-arrow {
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 8px;
   line-height: 34px;
   font-family: 'kuma';
-  color: #999;
+  color: #666;
+  font-size: 13px;
 }
 .kuma-select2-arrow * {
   display: none;
@@ -4535,7 +4607,7 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   border-color: #dbdbdb;
 }
 .kuma-select2-selection--single {
-  height: 34px;
+  height: 36px;
   cursor: pointer;
 }
 .kuma-select2-selection--single .kuma-select2-selection__rendered {
@@ -4545,13 +4617,14 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   text-overflow: ellipsis;
   padding-left: 10px;
   padding-right: 20px;
-  line-height: 32px;
+  line-height: 34px;
 }
 .kuma-select2-selection--single .kuma-select2-selection__clear {
   font-weight: bold;
   position: absolute;
-  top: 6px;
-  right: 20px;
+  top: 8px;
+  right: 22px;
+  color: #666;
 }
 .kuma-select2-selection--single .kuma-select2-selection__clear:after {
   content: '×';
@@ -4792,6 +4865,19 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 .kuma-tab-content .kuma-tab-tabpane-hidden {
   display: none;
 }
+.kuma-tab.kuma-tab-lg > .kuma-tab-bar .kuma-tab-nav,
+.kuma-tab.kuma-tab-sm > .kuma-tab-bar .kuma-tab-nav {
+  position: relative;
+}
+.kuma-tab.kuma-tab-lg > .kuma-tab-bar .kuma-tab-nav .kuma-tab-ink-bar,
+.kuma-tab.kuma-tab-sm > .kuma-tab-bar .kuma-tab-nav .kuma-tab-ink-bar {
+  position: absolute;
+  top: -1px;
+  height: 3px;
+  background-color: #2599f2;
+  z-index: 1;
+  transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
+}
 .kuma-tab.kuma-tab-lg > .kuma-tab-bar {
   background-color: #f7f7f7;
 }
@@ -4811,15 +4897,6 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 .kuma-tab.kuma-tab-lg > .kuma-tab-bar .kuma-tab-tab-active {
   position: relative;
   background-color: #fff;
-}
-.kuma-tab.kuma-tab-lg > .kuma-tab-bar .kuma-tab-tab-active:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 100%;
-  height: 3px;
-  background-color: #2599f2;
 }
 .kuma-tab.kuma-tab-lg > .kuma-tab-bar .kuma-tab-tab-active .kuma-tab-tab-inner {
   height: 49px;
@@ -4847,15 +4924,6 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 .kuma-tab.kuma-tab-sm > .kuma-tab-bar .kuma-tab-tab-active {
   position: relative;
   background-color: #fff;
-}
-.kuma-tab.kuma-tab-sm > .kuma-tab-bar .kuma-tab-tab-active:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 100%;
-  height: 3px;
-  background-color: #2599f2;
 }
 .kuma-tab.kuma-tab-sm > .kuma-tab-bar .kuma-tab-tab-active .kuma-tab-tab-inner {
   height: 39px;
@@ -4948,6 +5016,7 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 }
 .kuma-uxtable-actionbar {
   width: 100%;
+  margin-bottom: 12px;
   padding: 6px 0px 4px;
 }
 .kuma-uxtable-actionbar-item {
@@ -5884,15 +5953,16 @@ a.kuma-button-swhite {
 }
 .kuma-upload-picker .kuma-upload-button {
   display: inline-block;
-  background: #f2f2f2;
+  background: #f5f5f5;
   outline: none;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
   padding: 0 5px;
   font-size: 12px;
+  color: #666;
   box-sizing: border-box;
-  line-height: 22px;
-  height: 24px;
+  line-height: 24px;
+  height: 26px;
   transition: border-color 0.1s, color 0.1s;
 }
 .kuma-upload-picker .kuma-upload-button .kuma-icon-uploading {
@@ -5991,7 +6061,7 @@ a.kuma-button-swhite {
   float: left;
 }
 .kuma-upload-fileitem .filename {
-  color: #707070;
+  color: #424242;
   font-size: 14px;
 }
 .kuma-upload-fileitem .kuma-upload-status,
@@ -6040,7 +6110,7 @@ a.kuma-button-swhite {
   padding: 5px 6px;
 }
 .kuma-upload-filelist.minimode .kuma-upload-fileitem .field-info .kuma-upload-fileicon {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .kuma-upload-filelist.minimode .kuma-upload-fileitem .field-info .filename {
   vertical-align: middle;
@@ -6162,17 +6232,30 @@ a.kuma-button-swhite {
   clear: both;
   margin-bottom: 10px;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info .kuma-upload-fileicon {
-  margin: 0 5px;
-  font-size: 16px;
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-icon {
+  float: left;
+  background: #eee;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  padding: 6px 0;
+  text-align: center;
+  border-radius: 3px;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info .kuma-icon-caution {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-icon .kuma-upload-fileicon {
+  font-size: 24px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-icon .kuma-icon-caution {
   vertical-align: middle;
   margin: 0 5px;
   color: #ff6330;
   font-size: 14px;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info .kuma-loading {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap {
+  display: inline-block;
+  padding-top: 6px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-info .kuma-loading {
   display: inline-block;
   height: 16px;
   width: 16px;
@@ -6180,31 +6263,111 @@ a.kuma-button-swhite {
   vertical-align: middle;
   margin: 0 5px;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info .filename {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-info .filename {
   font-size: 12px;
   vertical-align: middle;
   white-space: nowrap;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status {
-  margin-left: 10px;
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status {
+  margin-left: 0;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status .kuma-upload-status {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-status {
   font-size: 12px;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status .kuma-upload-status.status-progress {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-status.status-progress {
   color: #f60;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status .kuma-upload-status.status-error {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-status.status-error {
   color: #ff6330;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status .kuma-upload-action {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-action {
   font-size: 12px;
   margin: 0 5px;
   color: #288df0;
   cursor: pointer;
 }
-.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-status .kuma-upload-action:hover {
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-action:hover {
   color: #fc6e51;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .close-action {
+  display: inline-block;
+  background: #f70;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .close-action .kuma-icon {
+  font-size: 16px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .close-action:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  clear: both;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  margin-top: 5px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info .field-image-preview img {
+  width: 70px;
+  height: 70px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info .kuma-upload-fileicon {
+  margin: 0 10px;
+  font-size: 16px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info .kuma-icon-caution {
+  vertical-align: middle;
+  margin: 0 5px;
+  color: #ff6330;
+  font-size: 14px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info .kuma-loading {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(data:image/gif;base64,R0lGODlhDAAMAPfIAOnp6f7+/vz8/P39/efn5+jo6Ovr6+zs7O3t7e/v7/j4+OTk5OH6///+/ezr6/T4+/Hy8uz6//3+/vLw8OH////9/O///+bl5f/49PT09fX3+vT5/Pz+//rTu/nRuPymbvX3+P3///+tdv+JRvH09+fz+/Xi1f+odujr7+f6/+Xo6/Ls5vSkduXq7//VvvLx7+rr6+jp6eXk5OzHruTt9f/v5+js7/O5kvvDnub8///y6/KiaP6bZ/5mBv9yKPnu5v+WbeTn6/L//+rp6fx1I/bs5OXl5P92SPT6/e/v8POiaf/+/v7+//Df1PvXwOnr6+Ly+/bZxvW4jv9dAv9WAPG0kO/w8v9vJfP4/OP2+/9pHOn0/ej1+e/3/fHi2P9FAPmxgPi3jvjv6fHz8/X5/PP//+Px+u3r6vH1+PX7/v339PLw8fX5+/1eCf2OR+f///rHpfT///Lx8Of4/+X6/uvr7OL6//fdy/Xg0fvYwfbp3u/s6+3EqOv7/+ft8O3r7OTt9P+caPaXWPqUTv9pO/Xz8P+QW/eRSP2RRvf///D9//1iDP9eDvf4+Onz/OL4/v/Ttvb5/P1mC/Lx8ffXwef+//T6/vb19f9EAPb3+OL///307vH2+efg2v5xEv9NAP/dzefm5vb6/Ons7vyWVfjFo/a+l+nl4vancfv7/On7/+rx9fPs5vD19+zy9faqd/94P+T+/+vSufX///+JU/D3/P/Yyufl5P/8+vb5+ub1+v7///9YFfLy8fp6K/D8/+bm5vf39+rq6vT09PHx8fLy8vX19eXl5f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MDIxQkZGNUVFMjYxMUUzQkYzN0ZGQzRENzlGRDZEMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MDIxQkZGNkVFMjYxMUUzQkYzN0ZGQzRENzlGRDZEMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQwMjFCRkYzRUUyNjExRTNCRjM3RkZDNEQ3OUZENkQzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQwMjFCRkY0RUUyNjExRTNCRjM3RkZDNEQ3OUZENkQzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkECQAAyAAsAAAAAAwADAAACGEAkQkcSJDgMGAAECAQdmHWwGDAjBFEQiEPsgDHhhVE5uGLi2IENiLDwAIPgGIikVmYIwylSAjCiAFIWYDYgGPBNgY7NgDZsGMSBxrLOLAYMAMJEhggEHSgAGIHDhATMDAgACH5BAUAAMgALAAAAAAMAAwAAAhgAJEJHEiQ4DBgABAgEAYs2MBgwIwRNHZMAbIAx4YVRKYhCJNiBDYK1GUCQDGRyBBpEXZSJKlBxACgdDRmwDGHBXOpkIBs2DGJAylqFFgMmIEECQwQADpQALEDB4gJGBgQACH5BAkAAMgALAgAAwAEAAgAAAgjAJEZWxAAGbICxAySgGHwxRtkNYhQQnZnESgyDAohC7XBYEAAIfkEBQAAyAAsAAAAAAwADAAACDMAkQkcSLCgwYMIExpbECAhsgLEHBYT5nACxYR+IiL8wUACQhFtihxMwoVPIIQOWnEYGBAAIfkECQAAyAAsBAAGAAgABgAACCQAkQkcWGygwQIGBUY6NmBgAxAthiGrEwHMlE4PBqqSAkvNwIAAIfkEBQAAyAAsAAAAAAwADAAACDUAkQkcSLCgwYMIEypcyJBgMWEKCxBLGOzYAIFG4hA0dmwYQTuoRuxZRcBYwVRuPJ1BI2BgQAAh+QQFAADIACwBAAYABwAGAAAIIQAnIBtI0AZBgmYaHUQmRAmQhYYOpbCSwMBAAV0cHCAWEAAh+QQJAADIACwAAAUABgAHAAAIIgCHIBs4cIsigshYVcFFEBKmDgQrwHmUBqGFWwYSICR2ICAAIfkEBQAAyAAsAAAAAAwADAAACC8AkQkcSLCgwYMIEw78lUPhjTAKeV1RGOWUwhCARCkcdsyYwmLADCRIKIDYAYMBAQAh+QQJAADIACwAAAEABAAIAAAIIwCRIXtwAZkYCmxsSdKDrFQPDMgqrRA4ipNAYgAEDjgWDFlAACH5BAkAAMgALAAAAAAMAAwAAAgzAJEJHEhwYIMTsmL9KSjQCRUeDAXu0oQjosBedCwKBLBGIzJhkzwSA+BxwLFgHlOqVBkQACH5BAkAAMgALAAAAAAMAAwAAAhjAJEJ3HTEVAQIAQQqtDTj06s+T4AFUxiMxiUdCo0dU4AswDEsCjMuCFCMQMiQBYgBKHZSYTFhwli2RPZS5UxkKQccm3gy2LEByIYdMxZS4zCXwAwkSGCAANGQAogdOEBMgMKAACH5BAkAAMgALAAAAAAMAAwAAAhjAJEJHFDLi48PAQQqHAasRBNGgrJkUhgMmDGFFcrIUIAswLFhChUaWxCgGIGQIQsQA1AMpcJiwoS1dIkM5kqayFQOOBbMZbBjA5ANO3ZR5MeXwAwkSGCAQFGFAogdOEBMgMKAACH5BAUAAMgALAAAAAAMAAwAAAhgAJEJHEiQ4DBgABC4iuGL1sBgwIwNXEJoRyJkAY4NK4gsA5QAxQhwFIiCGIBiI5HJESYM5chiwkymLEBswLFgHIMdG4Bs2DGJA41pHFgMmIEECQwQADpQALEDB4gJGBgQADs=) no-repeat center;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-image-info .filename {
+  font-size: 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-status {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-status .kuma-upload-action {
+  display: block;
+  background: #f70;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+}
+.kuma-upload-filelist.nwmode .kuma-upload-fileitem-img .field-status .kuma-upload-action:hover {
+  text-decoration: none;
 }
 /* alinw.transfer style module */
 .kuma-uxtransfer-container {
@@ -6947,6 +7110,12 @@ a.kuma-button-swhite {
 }
 .kuma-step.kuma-step-noicon .kuma-step-head .kuma-step-icon:after {
   content: '';
+}
+.kuma-step.kuma-step-noicon .kuma-step-main .kuma-step-title {
+  margin-top: 32px;
+}
+.kuma-step.kuma-step-noicon .kuma-step-main .kuma-step-description {
+  bottom: 46px;
 }
 .kuma-step.kuma-step-noicon .kuma-step-tail {
   padding: 0 0 0 22px;

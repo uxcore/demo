@@ -3158,7 +3158,6 @@ a:disabled {
   -webkit-user-select: none;
   background-color: #f37327;
   color: white;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-header > a {
   font-weight: bold;
@@ -3176,9 +3175,17 @@ a:disabled {
   position: absolute;
   left: 25px;
 }
+.kuma-calendar-header .kuma-calendar-prev-month-btn:after {
+  content: '\e644';
+  font-size: 16px;
+}
 .kuma-calendar-header .kuma-calendar-next-month-btn {
   position: absolute;
   right: 25px;
+}
+.kuma-calendar-header .kuma-calendar-next-month-btn:after {
+  content: '\e643';
+  font-size: 16px;
 }
 .kuma-calendar-ym-select,
 .kuma-calendar-my-select {
@@ -3206,15 +3213,15 @@ a:disabled {
 .kuma-calendar-prev-year-btn,
 .kuma-calendar-next-year-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   cursor: pointer;
   color: white;
   width: 24px;
   height: 24px;
   border-radius: 3px;
   font-size: 16px;
-  display: inline-block;
   line-height: 24px;
+  text-indent: 999em;
 }
 .kuma-calendar-prev-month-btn:hover,
 .kuma-calendar-next-month-btn:hover,
@@ -3223,11 +3230,29 @@ a:disabled {
   background: #f58d51;
   color: white;
 }
+.kuma-calendar-prev-month-btn:after,
+.kuma-calendar-next-month-btn:after,
+.kuma-calendar-prev-year-btn:after,
+.kuma-calendar-next-year-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
+}
 .kuma-calendar-next-year-btn {
   right: 0;
 }
+.kuma-calendar-next-year-btn:after {
+  content: '\e615';
+}
 .kuma-calendar-prev-year-btn {
   left: 0;
+}
+.kuma-calendar-prev-year-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-calendar-body {
   padding: 9px 10px 10px;
@@ -3257,6 +3282,10 @@ a:disabled {
 .kuma-calendar-column-header .kuma-calendar-column-header-inner {
   display: block;
   font-weight: normal;
+  color: #f37327;
+}
+.kuma-calendar-column-header .kuma-calendar-column-header-inner.weekend {
+  color: #f0b695;
 }
 .kuma-calendar-week-number-header .kuma-calendar-column-header-inner {
   display: none;
@@ -3389,7 +3418,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-time-panel-body {
   padding: 9px 10px 10px;
@@ -3459,7 +3487,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-month-panel-header > a {
   font-weight: bold;
@@ -3474,23 +3501,47 @@ a:disabled {
 .kuma-calendar-month-panel-prev-year-btn,
 .kuma-calendar-month-panel-next-year-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   line-height: 24px;
   width: 24px;
   padding: 0px;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-month-panel-prev-year-btn:hover,
 .kuma-calendar-month-panel-next-year-btn:hover {
   color: white;
   background: #f58d51;
 }
+.kuma-calendar-month-panel-prev-year-btn:after,
+.kuma-calendar-month-panel-next-year-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
+}
 .kuma-calendar-month-panel-prev-year-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-month-panel-prev-year-btn:after {
+  content: '\e616';
+}
+.kuma-calendar-month-panel-next-year-btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  right: 10px;
+}
+.kuma-calendar-month-panel-next-year-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-month-panel .kuma-calendar-month-panel-year-select {
   width: 180px;
@@ -3510,13 +3561,6 @@ a:disabled {
 .kuma-calendar-month-panel-year-select-arrow {
   display: none;
 }
-.kuma-calendar-month-panel-next-year-btn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  right: 0;
-}
 .kuma-calendar-month-panel-body {
   padding: 9px 10px 10px;
 }
@@ -3534,11 +3578,11 @@ a:disabled {
   width: 46px;
   margin: 0 auto;
   color: #666;
-  border-radius: 3px;
-  height: 36px;
+  border-radius: 23px;
+  height: 46px;
   padding: 0;
   background: transparent;
-  line-height: 36px;
+  line-height: 46px;
   text-align: center;
 }
 .kuma-calendar-month-panel-cell .kuma-calendar-month-panel-month:hover {
@@ -3555,6 +3599,9 @@ a:disabled {
 .kuma-calendar-month-panel-selected-cell .kuma-calendar-month-panel-month {
   background: #f37327;
   color: #fff;
+}
+.kuma-calendar-month-panel-selected-cell .kuma-calendar-month-panel-month:hover {
+  background: #f37327;
 }
 .kuma-calendar-year-panel {
   left: 0;
@@ -3580,7 +3627,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-year-panel-header > a {
   font-weight: bold;
@@ -3604,22 +3650,35 @@ a:disabled {
 .kuma-calendar-year-panel-prev-decade-btn,
 .kuma-calendar-year-panel-next-decade-btn {
   position: absolute;
-  top: 0;
   line-height: 24px;
-  top: 7px;
+  top: 9px;
   width: 24px;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-year-panel-prev-decade-btn:hover,
 .kuma-calendar-year-panel-next-decade-btn:hover {
   background: #f58d51;
+}
+.kuma-calendar-year-panel-prev-decade-btn:after,
+.kuma-calendar-year-panel-next-decade-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
 }
 .kuma-calendar-year-panel-prev-decade-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-year-panel-prev-decade-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-year-panel .kuma-calendar-year-panel-decade-select {
   width: 180px;
@@ -3632,7 +3691,10 @@ a:disabled {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  right: 0;
+  right: 10px;
+}
+.kuma-calendar-year-panel-next-decade-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-year-panel-body {
   padding: 9px 10px 10px;
@@ -3651,11 +3713,11 @@ a:disabled {
   width: 46px;
   margin: 0 auto;
   color: #666;
-  border-radius: 3px;
-  height: 36px;
+  border-radius: 46px;
+  height: 46px;
   padding: 0;
   background: transparent;
-  line-height: 36px;
+  line-height: 46px;
   text-align: center;
 }
 .kuma-calendar-year-panel-year:hover {
@@ -3676,13 +3738,8 @@ a:disabled {
 }
 .kuma-calendar-year-panel-last-decade-cell .kuma-calendar-year-panel-year:before,
 .kuma-calendar-year-panel-next-decade-cell .kuma-calendar-year-panel-year:before {
-  content: ">";
-  font-family: "iconfont" !important;
-}
-.kuma-calendar-year-panel-last-decade-cell .kuma-calendar-year-panel-year {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  content: '\e645';
+  font-family: 'kuma' !important;
 }
 .kuma-calendar-decade-panel {
   left: 0;
@@ -3708,7 +3765,6 @@ a:disabled {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  border-bottom: 1px solid #ccc;
 }
 .kuma-calendar-decade-panel-header > a {
   font-weight: bold;
@@ -3727,28 +3783,45 @@ a:disabled {
 .kuma-calendar-decade-panel-prev-century-btn,
 .kuma-calendar-decade-panel-next-century-btn {
   position: absolute;
-  top: 7px;
+  top: 9px;
   line-height: 24px;
   display: inline-block;
   border-radius: 3px;
+  text-indent: 999em;
 }
 .kuma-calendar-decade-panel-prev-century-btn:hover,
 .kuma-calendar-decade-panel-next-century-btn:hover {
   background: #f58d51;
+}
+.kuma-calendar-decade-panel-prev-century-btn:after,
+.kuma-calendar-decade-panel-next-century-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  font-family: 'kuma';
+  font-size: 20px;
+  text-indent: 0;
 }
 .kuma-calendar-decade-panel-prev-century-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  left: 0;
+  left: 10px;
+}
+.kuma-calendar-decade-panel-prev-century-btn:after {
+  content: '\e616';
 }
 .kuma-calendar-decade-panel-next-century-btn {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  right: 0;
+  right: 10px;
+}
+.kuma-calendar-decade-panel-next-century-btn:after {
+  content: '\e615';
 }
 .kuma-calendar-decade-panel-body {
   padding: 9px 10px 10px;
@@ -3791,13 +3864,8 @@ a:disabled {
 }
 .kuma-calendar-decade-panel-last-century-cell .kuma-calendar-decade-panel-decade:before,
 .kuma-calendar-decade-panel-next-century-cell .kuma-calendar-decade-panel-decade:before {
-  content: ">";
-  font-family: "iconfont" !important;
-}
-.kuma-calendar-decade-panel-last-century-cell .kuma-calendar-decade-panel-decade {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  content: '\e645';
+  font-family: 'kuma' !important;
 }
 .kuma-time-picker {
   display: inline-block;
@@ -4386,6 +4454,9 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 .kuma-page-options-quick-jumper input:hover {
   border-color: #ccc;
 }
+.kuma-page-options-quick-jumper input:focus {
+  background-color: #fff;
+}
 .kuma-page-simple .kuma-page-prev,
 .kuma-page-simple .kuma-page-next {
   font-size: 10px;
@@ -4493,11 +4564,12 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 }
 .kuma-select2-arrow {
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 8px;
   line-height: 34px;
   font-family: 'kuma';
-  color: #999;
+  color: #666;
+  font-size: 13px;
 }
 .kuma-select2-arrow * {
   display: none;
@@ -4535,7 +4607,7 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   border-color: #dbdbdb;
 }
 .kuma-select2-selection--single {
-  height: 34px;
+  height: 36px;
   cursor: pointer;
 }
 .kuma-select2-selection--single .kuma-select2-selection__rendered {
@@ -4545,13 +4617,14 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   text-overflow: ellipsis;
   padding-left: 10px;
   padding-right: 20px;
-  line-height: 32px;
+  line-height: 34px;
 }
 .kuma-select2-selection--single .kuma-select2-selection__clear {
   font-weight: bold;
   position: absolute;
-  top: 6px;
-  right: 20px;
+  top: 8px;
+  right: 22px;
+  color: #666;
 }
 .kuma-select2-selection--single .kuma-select2-selection__clear:after {
   content: '×';
@@ -4943,6 +5016,7 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
 }
 .kuma-uxtable-actionbar {
   width: 100%;
+  margin-bottom: 12px;
   padding: 6px 0px 4px;
 }
 .kuma-uxtable-actionbar-item {
@@ -7036,6 +7110,12 @@ a.kuma-button-swhite {
 }
 .kuma-step.kuma-step-noicon .kuma-step-head .kuma-step-icon:after {
   content: '';
+}
+.kuma-step.kuma-step-noicon .kuma-step-main .kuma-step-title {
+  margin-top: 32px;
+}
+.kuma-step.kuma-step-noicon .kuma-step-main .kuma-step-description {
+  bottom: 46px;
 }
 .kuma-step.kuma-step-noicon .kuma-step-tail {
   padding: 0 0 0 22px;
