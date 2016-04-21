@@ -25,14 +25,6 @@ class Demo extends React.Component {
                         <TabPane tab="tab 3" key="3">选项卡三</TabPane>
                     </Tabs>
                 </div>
-                <h3>FILTER</h3>
-                <div className="demo-box">
-                    <Tabs defaultActiveKey="2" type="filter">
-                        <TabPane tab="tab 1" key="1">选项卡一</TabPane>
-                        <TabPane tab="tab 2" key="2">选项卡二</TabPane>
-                        <TabPane tab="tab 3" key="3">选项卡三</TabPane>
-                    </Tabs>
-                </div>
                 <h3>BRICK</h3>
                 <div className="demo-box">
                     <Tabs defaultActiveKey="2" type="brick">
@@ -53,7 +45,7 @@ class Demo extends React.Component {
                 <div className="demo-box">
                     <Tabs defaultActiveKey="1">
                         <TabPane tab="tab 1" key="1">
-                            <Tabs defaultActiveKey="2" type="filter">
+                            <Tabs defaultActiveKey="2" type="brick">
                                 <TabPane tab="tab 1" key="1">选项卡一</TabPane>
                                 <TabPane tab="tab 2" key="2">选项卡二</TabPane>
                                 <TabPane tab="tab 3" key="3">选项卡三</TabPane>
