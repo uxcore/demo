@@ -2846,7 +2846,7 @@ a:disabled {
   position: absolute;
   left: -9999px;
   top: -9999px;
-  z-index: 1000;
+  z-index: 1070;
 }
 .kuma-calendar-picker-hidden {
   display: none;
@@ -5748,7 +5748,7 @@ a.kuma-button-swhite {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1080;
+  z-index: 1050;
   cursor: auto;
   -webkit-user-select: text;
      -moz-user-select: text;
@@ -6735,6 +6735,7 @@ a.kuma-button-swhite {
 }
 .kuma-uxform {
   zoom: 1;
+  min-height: 48px;
 }
 .kuma-uxform:after {
   visibility: hidden;
@@ -6758,6 +6759,7 @@ a.kuma-button-swhite {
 }
 .kuma-uxform-row {
   min-width: 100%;
+  min-height: 48px;
   float: left;
   clear: both;
 }
@@ -7556,12 +7558,18 @@ a.kuma-button-swhite {
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-.kuma-checkbox-group > label {
+:root .kuma-checkbox-group > label {
   display: inline-block;
-  color: #333;
+  line-height: 16px;
 }
-.kuma-checkbox-group > label span {
-  padding: 0px 20px 0px 4px;
+:root .kuma-checkbox-group > label s {
+  vertical-align: top;
+  display: inline-block;
+}
+:root .kuma-checkbox-group > label span {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0px 20px 0px 0px;
 }
 /**
  * Radiogroup Component Style for uxcore
@@ -7572,9 +7580,15 @@ a.kuma-button-swhite {
  */
 .kuma-radio-group > label {
   display: inline-block;
+  line-height: 16px;
+}
+.kuma-radio-group > label s {
+  vertical-align: top;
 }
 .kuma-radio-group > label span {
-  padding: 0px 20px 0px 4px;
+  padding: 0px 20px 0px 0px;
+  display: inline-block;
+  vertical-align: top;
 }
 /**
  * Layout Component Style for uxcore
