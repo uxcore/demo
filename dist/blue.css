@@ -5223,6 +5223,138 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   -moz-osx-font-smoothing: grayscale;
   line-height: 32px;
 }
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-enter,
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-enter-active,
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpIn;
+          animation-name: slideUpIn;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpOut;
+          animation-name: slideUpOut;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-enter,
+.kuma-select2-dropdown-placement-topLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-enter-active,
+.kuma-select2-dropdown-placement-topLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownIn;
+          animation-name: slideDownIn;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownOut;
+          animation-name: slideDownOut;
+}
 /**
  * Tabs Component Style for uxcore
  * @author
