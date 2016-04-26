@@ -2842,6 +2842,202 @@ a:disabled {
 .kuma-calendar-year-calendar-container .kuma-calendar-year-panel {
   position: relative;
 }
+@-webkit-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@-webkit-keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@-webkit-keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@-webkit-keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+.kuma-calendar-picker-placement-bottomLeft.slideUp-enter,
+.kuma-calendar-picker-placement-bottomLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-calendar-picker-placement-bottomLeft.slideUp-enter-active,
+.kuma-calendar-picker-placement-bottomLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpIn;
+          animation-name: slideUpIn;
+}
+.kuma-calendar-picker-placement-bottomLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-calendar-picker-placement-bottomLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpOut;
+          animation-name: slideUpOut;
+}
+.kuma-calendar-picker-placement-topLeft.slideUp-enter,
+.kuma-calendar-picker-placement-topLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-calendar-picker-placement-topLeft.slideUp-enter-active,
+.kuma-calendar-picker-placement-topLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownIn;
+          animation-name: slideDownIn;
+}
+.kuma-calendar-picker-placement-topLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-calendar-picker-placement-topLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownOut;
+          animation-name: slideDownOut;
+}
 .kuma-calendar-picker {
   position: absolute;
   left: -9999px;
@@ -4123,6 +4319,76 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   margin-left: 8px;
   margin-bottom: 0;
 }
+@-webkit-keyframes threeFallVertical {
+  0% {
+    opacity: 0;
+    -webkit-transform: perspective(1300px) rotateX(-90deg);
+            transform: perspective(1300px) rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: perspective(1300px) rotateX(0deg);
+            transform: perspective(1300px) rotateX(0deg);
+  }
+}
+@keyframes threeFallVertical {
+  0% {
+    opacity: 0;
+    -webkit-transform: perspective(1300px) rotateX(-90deg);
+            transform: perspective(1300px) rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: perspective(1300px) rotateX(0deg);
+            transform: perspective(1300px) rotateX(0deg);
+  }
+}
+.threeFallV-enter,
+.threeFallV-appear {
+  opacity: 0;
+  -webkit-transform: perspective(1300px) rotateX(-90deg);
+          transform: perspective(1300px) rotateX(-90deg);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.threeFallV-enter-active,
+.threeFallV-appear-active {
+  visibility: visible;
+  -webkit-animation-name: threeFallVertical;
+          animation-name: threeFallVertical;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.fade-enter-active,
+.fade-appear-active {
+  visibility: visible;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
 .kuma-dlg-wrap-hidden > .kuma-dlg-mask {
   display: none;
 }
@@ -4968,6 +5234,138 @@ li.kuma-time-picker-panel-select-option-disabled:hover {
   -webkit-text-stroke-width: .2px;
   -moz-osx-font-smoothing: grayscale;
   line-height: 32px;
+}
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-enter,
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-enter-active,
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpIn;
+          animation-name: slideUpIn;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-bottomLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpOut;
+          animation-name: slideUpOut;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-enter,
+.kuma-select2-dropdown-placement-topLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-enter-active,
+.kuma-select2-dropdown-placement-topLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownIn;
+          animation-name: slideDownIn;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.kuma-select2-dropdown-placement-topLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownOut;
+          animation-name: slideDownOut;
 }
 /**
  * Tabs Component Style for uxcore
@@ -6735,7 +7133,6 @@ a.kuma-button-swhite {
 }
 .kuma-uxform {
   zoom: 1;
-  min-height: 48px;
 }
 .kuma-uxform:after {
   visibility: hidden;
@@ -6759,7 +7156,6 @@ a.kuma-button-swhite {
 }
 .kuma-uxform-row {
   min-width: 100%;
-  min-height: 48px;
   float: left;
   clear: both;
 }
@@ -8606,7 +9002,7 @@ a.kuma-button-swhite {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes DlgFadeIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -8618,7 +9014,7 @@ a.kuma-button-swhite {
             transform: scale(1);
   }
 }
-@keyframes fadeIn {
+@keyframes DlgFadeIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -8748,18 +9144,6 @@ a.kuma-button-swhite {
     opacity: 1;
     -webkit-transform: perspective(1300px) rotateY(0deg);
             transform: perspective(1300px) rotateY(0deg);
-  }
-}
-@-webkit-keyframes threeFallVertical {
-  0% {
-    opacity: 0;
-    -webkit-transform: perspective(1300px) rotateX(-90deg);
-            transform: perspective(1300px) rotateX(-90deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: perspective(1300px) rotateX(0deg);
-            transform: perspective(1300px) rotateX(0deg);
   }
 }
 @keyframes threeFallVertical {
@@ -8914,8 +9298,8 @@ a.kuma-button-swhite {
             transform: perspective(1300px) translateZ(0px) translateX(0%) rotateY(0deg);
   }
 }
-.fade-enter,
-.fade-appear {
+.dlgFade-enter,
+.dlgFade-appear {
   opacity: 0;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
@@ -8928,11 +9312,11 @@ a.kuma-button-swhite {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
 }
-.fade-enter-active,
-.fade-appear-active {
+.dlgFade-enter-active,
+.dlgFade-appear-active {
   visibility: visible;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+  -webkit-animation-name: DlgFadeIn;
+  animation-name: DlgFadeIn;
 }
 .slideRight-enter,
 .slideRight-appear {
@@ -9463,22 +9847,6 @@ a.kuma-button-swhite {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut;
 }
-@-webkit-keyframes slideUpIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(0.8);
-            transform: scaleY(0.8);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
 @keyframes slideUpIn {
   0% {
     opacity: 0;
@@ -9495,7 +9863,7 @@ a.kuma-button-swhite {
             transform: scaleY(1);
   }
 }
-@-webkit-keyframes slideUpOut {
+@keyframes slideUpOut {
   0% {
     opacity: 1;
     -webkit-transform-origin: 0 0;
@@ -9511,13 +9879,109 @@ a.kuma-button-swhite {
             transform: scaleY(0.8);
   }
 }
-.slideUp-enter,
-.slideUp-appear {
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@-webkit-keyframes moveUpIn {
+  0% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveUpIn {
+  0% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveUpOut {
+  0% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes moveUpOut {
+  0% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+.moveUp-enter,
+.moveUp-appear {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   opacity: 0;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: scaleY(0.8);
-          transform: scaleY(0.8);
   -webkit-animation-timing-function: ease;
   -webkit-animation-duration: .3s;
   -mozanimation-timing-function: ease;
@@ -9527,18 +9991,18 @@ a.kuma-button-swhite {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
 }
-.slideUp-enter-active,
-.slideUp-appear-active {
+.moveUp-enter-active,
+.moveUp-appear-active {
   visibility: visible;
-  -webkit-animation-name: slideUpIn;
-  animation-name: slideUpIn;
+  -webkit-animation-name: moveUpIn;
+  animation-name: moveUpIn;
 }
-.slideUp-leave {
+.moveUp-leave {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
   -webkit-animation-timing-function: ease;
   -webkit-animation-duration: .3s;
   -mozanimation-timing-function: ease;
@@ -9548,8 +10012,8 @@ a.kuma-button-swhite {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
 }
-.slideUp-leave-active {
+.moveUp-leave-active {
   visibility: visible;
-  -webkit-animation-name: slideUpOut;
-  animation-name: slideUpOut;
+  -webkit-animation-name: moveUpOut;
+  animation-name: moveUpOut;
 }
