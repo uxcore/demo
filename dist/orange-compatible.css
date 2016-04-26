@@ -3042,138 +3042,6 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   -moz-osx-font-smoothing: grayscale;
   line-height: 32px;
 }
-@keyframes slideUpIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(0.8);
-            transform: scaleY(0.8);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-@keyframes slideUpOut {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: scaleY(0.8);
-            transform: scaleY(0.8);
-  }
-}
-@keyframes slideDownIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 100% 100%;
-            transform-origin: 100% 100%;
-    -webkit-transform: scaleY(0.8);
-            transform: scaleY(0.8);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 100% 100%;
-            transform-origin: 100% 100%;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-@keyframes slideDownOut {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 100% 100%;
-            transform-origin: 100% 100%;
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 100% 100%;
-            transform-origin: 100% 100%;
-    -webkit-transform: scaleY(0.8);
-            transform: scaleY(0.8);
-  }
-}
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-enter,
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-appear {
-  opacity: 0;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: scaleY(0.8);
-          transform: scaleY(0.8);
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
-}
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-enter-active,
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-appear-active {
-  visibility: visible;
-  -webkit-animation-name: slideUpIn;
-          animation-name: slideUpIn;
-}
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-leave {
-  opacity: 1;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
-}
-.uxcore .kuma-select2-dropdown-placement-bottomLeft.slideUp-leave-active {
-  visibility: visible;
-  -webkit-animation-name: slideUpOut;
-          animation-name: slideUpOut;
-}
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-enter,
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-appear {
-  opacity: 0;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-  -webkit-transform: scaleY(0.8);
-          transform: scaleY(0.8);
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
-}
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-enter-active,
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-appear-active {
-  visibility: visible;
-  -webkit-animation-name: slideDownIn;
-          animation-name: slideDownIn;
-}
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-leave {
-  opacity: 1;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
-}
-.uxcore .kuma-select2-dropdown-placement-topLeft.slideUp-leave-active {
-  visibility: visible;
-  -webkit-animation-name: slideDownOut;
-          animation-name: slideDownOut;
-}
 .uxcore .kuma-tab {
   border: 1px solid #dbdbdb;
 }
@@ -4809,8 +4677,8 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a.enable:active,
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a:active {
-  border-color: #2c2f33;
-  color: #2c2f33;
+  border-color: #dd5312;
+  color: #dd5312;
 }
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a.enable {
   border-color: #f37327;
@@ -5448,7 +5316,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   padding-left: 0;
   list-style: none;
   z-index: 1001;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #e8e8e8;
   color: #333;
   background: #fff;
 }
@@ -5578,7 +5446,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-menu-horizontal {
   background-color: #FBFBFB;
   border: none;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #e8e8e8;
   padding-left: 24px;
   z-index: 0;
 }
@@ -5683,30 +5551,18 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   margin-right: 8px;
   top: -1px;
 }
-.uxcore :root .kuma-checkbox-group > label {
+.uxcore .kuma-checkbox-group > label {
   display: inline-block;
-  line-height: 16px;
+  color: #333;
 }
-.uxcore :root .kuma-checkbox-group > label s {
-  vertical-align: top;
-  display: inline-block;
-}
-.uxcore :root .kuma-checkbox-group > label span {
-  vertical-align: top;
-  display: inline-block;
-  padding: 0px 20px 0px 0px;
+.uxcore .kuma-checkbox-group > label span {
+  padding: 0px 20px 0px 4px;
 }
 .uxcore .kuma-radio-group > label {
   display: inline-block;
-  line-height: 16px;
-}
-.uxcore .kuma-radio-group > label s {
-  vertical-align: top;
 }
 .uxcore .kuma-radio-group > label span {
-  padding: 0px 20px 0px 0px;
-  display: inline-block;
-  vertical-align: top;
+  padding: 0px 20px 0px 4px;
 }
 .uxcore .kuma-layout-2c {
   margin: 0 auto;
