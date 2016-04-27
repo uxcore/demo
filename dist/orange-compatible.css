@@ -4809,8 +4809,8 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a.enable:active,
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a:active {
-  border-color: #dd5312;
-  color: #dd5312;
+  border-color: #2c2f33;
+  color: #2c2f33;
 }
 .uxcore .kuma-uxtransfer-container td.kuma-uxtransfer-buttons > a.enable {
   border-color: #f37327;
