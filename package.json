@@ -20,6 +20,7 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "i18n-helper": "~1.1.1",
+    "object-assign": "~4.1.0",
     "react-mixin": "~1.7.0",
     "react-router": "~2.0.1",
     "uxcore-animate": "~0.1.0"

@@ -42,7 +42,9 @@
                     "Validator": "uxcore-validator",
                     "Message": "uxcore-message",
                     "Pickable": "uxcore-pickable",
-                    "PrimaryNav": "@ali/uxcore-primary-nav"
+                    "PrimaryNav": "@ali/uxcore-primary-nav",
+                    "Hovercard": "@ali/uxcore-hovercard",
+                    "EmployeeSearch": "@ali/uxcore-employee-search"
                 }
             }
         }

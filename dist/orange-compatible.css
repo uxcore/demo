@@ -6,20 +6,6 @@
 }
 .uxcore {
   /**
- * Hovercard Component Style for uxcore
- * @author jinghong
- *
- * Copyright 2014-2015, Uxcore Team, Alinw.
- * All rights reserved.
- */
-  /**
- * EmployeeSearch Component Style for uxcore
- * @author eternalsky
- *
- * Copyright 2014-2015, Uxcore Team, Alinw.
- * All rights reserved.
- */
-  /**
  * Calendar Component Style for uxcore
  * @author
  *
@@ -210,385 +196,41 @@
   /**
  * Mixin
  */
-}
-.uxcore .kuma-hovercard {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  z-index: 1070;
-  display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.4;
-}
-.uxcore .kuma-hovercard-hidden {
-  display: none;
-}
-.uxcore .kuma-hovercard-placement-left {
-  margin-left: -3px;
-  padding: 0 5px;
-}
-.uxcore .kuma-hovercard-placement-left > .kuma-hovercard-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #d9d9d9;
-}
-.uxcore .kuma-hovercard-placement-left > .kuma-hovercard-arrow:after {
-  content: " ";
-  right: 3px;
-  border-right-width: 0;
-  border-left-color: #fff;
-  bottom: -3px;
-}
-.uxcore .kuma-hovercard-placement-top {
-  margin-top: -3px;
-  padding: 5px 0;
-}
-.uxcore .kuma-hovercard-placement-top > .kuma-hovercard-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #d9d9d9;
-}
-.uxcore .kuma-hovercard-placement-top > .kuma-hovercard-arrow:after {
-  content: " ";
-  bottom: 3px;
-  left: -3px;
-  border-bottom-width: 0;
-  border-top-color: #fff;
-}
-.uxcore .kuma-hovercard-placement-bottom {
-  margin-top: 3px;
-  padding: 5px 0;
-}
-.uxcore .kuma-hovercard-placement-bottom > .kuma-hovercard-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #d9d9d9;
-}
-.uxcore .kuma-hovercard-placement-bottom > .kuma-hovercard-arrow:after {
-  content: " ";
-  top: 3px;
-  left: -3px;
-  border-top-width: 0;
-  border-bottom-color: #fff;
-}
-.uxcore .kuma-hovercard-placement-right {
-  margin-left: 3px;
-  padding: 0 5px;
-}
-.uxcore .kuma-hovercard-placement-right > .kuma-hovercard-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: #d9d9d9;
-}
-.uxcore .kuma-hovercard-placement-right > .kuma-hovercard-arrow:after {
-  content: " ";
-  left: 3px;
-  bottom: -3px;
-  border-left-width: 0;
-  border-right-color: #fff;
-}
-.uxcore .kuma-hovercard-arrow,
-.uxcore .kuma-hovercard-arrow:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-.uxcore .kuma-hovercard-inner {
-  min-width: 177px;
-  max-width: 276px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #ffffff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
-  overflow: hidden;
-}
-.uxcore .kuma-hovercard.uxcore .kuma-hovercard-zoom-enter,
-.uxcore .kuma-hovercard.uxcore .kuma-hovercard-zoom-leave {
-  display: block;
-}
-.uxcore .kuma-hovercard-zoom-enter,
-.uxcore .kuma-hovercard-zoom-appear {
-  opacity: 0;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-          animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.uxcore .kuma-hovercard-zoom-leave {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
-          animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.uxcore .kuma-hovercard-zoom-enter.uxcore .kuma-hovercard-zoom-enter-active,
-.uxcore .kuma-hovercard-zoom-appear.uxcore .kuma-hovercard-zoom-appear-active {
-  -webkit-animation-name: rcToolTipZoomIn;
-          animation-name: rcToolTipZoomIn;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-.uxcore .kuma-hovercard-zoom-leave.uxcore .kuma-hovercard-zoom-leave-active {
-  -webkit-animation-name: rcToolTipZoomOut;
-          animation-name: rcToolTipZoomOut;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@-webkit-keyframes rcToolTipZoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@keyframes rcToolTipZoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes rcToolTipZoomOut {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-  }
-}
-@keyframes rcToolTipZoomOut {
-  0% {
-    opacity: 1;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-  }
-}
-.uxcore .kuma-hovercard-container {
-  width: 255px;
-  border: 1px solid #bbbbbb;
-  float: left;
-  box-shadow: 0px 1px 2px 0px #EDEDED;
-  background-color: #FFF;
-  font-size: 12px;
-}
-.uxcore .kuma-hovercard-container ul,
-.uxcore .kuma-hovercard-container li {
-  padding: 0px;
-  margin: 0px;
-}
-.uxcore .kuma-hovercard-container a {
-  text-decoration: none;
-  color: #288df0;
-}
-.uxcore .kuma-hovercard-container a img {
-  border: 0;
-}
-.uxcore .kuma-hovercard-container .g-csscut-more {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info {
-  padding: 6px 0 6px 6px;
-  position: relative;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-avatar {
-  float: left;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-avatar a {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-avatar a img {
-  max-width: 60px;
-  max-height: 60px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-content {
-  padding-left: 68px;
-  width: 180px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-content .kuma-hovercard-name {
-  font-size: 14px;
-  display: inline-block;
-  max-width: 180px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-content li {
-  line-height: 21px;
-  height: 21px;
-  width: 180px;
-  margin-top: 0;
-  list-style: none;
-  text-align: left;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-content li.singledetail {
-  line-height: 40px;
-  height: 40px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 14px;
-  height: 14px;
-  cursor: pointer;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn span {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: url(https://aliwork.alicdn.com/tps/i4/TB1Q1l1FVXXXXX1XpXXtF3DLXXX-148-349.png);
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-followed {
-  background-position: 114px 97px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-followed:hover {
-  background-position: 58px 97px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-friends {
-  background-position: 114px 64px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-friends:hover {
-  background-position: 58px 64px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-stranger {
-  background-position: 114px 132px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-stranger:hover {
-  background-position: 58px 132px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-info .kuma-hovercard-conn .kuma-hovercard-connecting {
-  background: url(https://aliwork.alicdn.com/tps/i1/TB16alZFVXXXXcYXFXXJIc..VXX-14-14.gif);
-  background-position: 0 0;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools {
-  background-color: #f1f1f1;
-  color: #666666;
-  float: left;
-  width: 100%;
-  height: 25px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools li {
-  display: inline-block;
-  float: left;
-  background: url(https://aliwork.alicdn.com/tps/i4/TB1Q1l1FVXXXXX1XpXXtF3DLXXX-148-349.png);
-  width: 69px;
-  height: 25px;
-  line-height: 25px;
-  cursor: pointer;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools li span {
-  margin-left: 27px;
-  line-height: 27px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools li:hover {
-  background-color: #4098F7;
-  color: #fff;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-at {
-  width: 50px;
-  background-position: 124px 293px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-at:hover {
-  background-position: 70px 293px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-phone.kuma-hovercard-phoneoff {
-  background-position: 124px 263px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-phone.kuma-hovercard-phoneoff:hover {
-  background-position: 70px 263px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-phone.kuma-hovercard-phoneon {
-  background-position: 125px 37px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-phone.kuma-hovercard-phoneon:hover {
-  background-position: 71px 37px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-ww {
-  background-position: 124px 230px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-ww:hover {
-  background-position: 70px 230px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-email {
-  background-position: 124px 199px;
-  width: 65px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-tools .kuma-hovercard-email:hover {
-  background-position: 70px 199px;
-}
-.uxcore .kuma-hovercard-container .kuma-hovercard-error {
-  height: 60px;
-  line-height: 60px;
-  font-size: 14px;
-  text-align: center;
-  color: #666666;
-}
-.uxcore .kuma-employee-search {
-  width: 330px;
-}
-.uxcore .kuma-employee-search-dropdown .option-img {
-  height: 30px;
-  width: 30px;
-  margin-right: 5px;
-  border-radius: 4px;
-}
-.uxcore .kuma-employee-search-dropdown .option-content {
-  vertical-align: middle;
+  /**
+ * Rate Component Style for uxcore
+ * @author quanyun.mqy
+ *
+ * Copyright 2014-2015, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+  /**
+ * Switch Component Style for uxcore
+ * @author eternalsky
+ *
+ * Copyright 2015-2016, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+  /**
+ * Badge Component Style for uxcore
+ * @author eternalsky
+ *
+ * Copyright 2015-2016, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+  /**
+ * TreeSelect Component Style for uxcore
+ * @author biangang.bg
+ *
+ * Copyright 2014-2015, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
+  /**
+ * LoadMore Component Style for uxcore
+ * @author peijie.dpj
+ *
+ * Copyright 2015-2016, Uxcore Team, Alinw.
+ * All rights reserved.
+ */
 }
 .uxcore .kuma-calendar {
   box-sizing: border-box;
@@ -604,7 +246,7 @@
 }
 .uxcore .kuma-calendar-input-wrap {
   position: relative;
-  padding: 6px;
+  padding: 5px 10px;
   border-bottom: 1px solid #e9e9e9;
 }
 .uxcore .kuma-calendar-input-wrap:after {
@@ -637,7 +279,7 @@
   cursor: text;
   line-height: 1.5;
   outline: 0;
-  height: 22px;
+  height: 23px;
 }
 .uxcore .kuma-calendar-input-invalid {
   border-color: red;
@@ -865,6 +507,23 @@
   visibility: visible;
   -webkit-animation-name: slideDownOut;
           animation-name: slideDownOut;
+}
+.uxcore .kuma-calendar-picker-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.uxcore .kuma-calendar-picker-input .kuma-input[readonly] {
+  background-color: white;
+}
+.uxcore .kuma-calendar-picker-input .kuma-input[disabled] {
+  background-color: #e8e8e8;
+}
+.uxcore .kuma-calendar-picker-input .kuma-icon-calender {
+  position: absolute;
+  color: #999;
+  top: 7px;
+  right: 10px;
 }
 .uxcore .kuma-calendar-picker {
   position: absolute;
@@ -2237,6 +1896,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-dlg-confirm .kuma-dlg-body .kuma-confirm-body {
   padding: 20px;
+  white-space: nowrap;
 }
 .uxcore .kuma-dlg-confirm .kuma-dlg-body .kuma-confirm-body > .kuma-icon {
   display: inline-block;
@@ -2261,11 +1921,14 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   vertical-align: middle;
   font-size: 14px;
   color: #333;
+  max-width: 220px;
+  white-space: pre-wrap;
 }
 .uxcore .kuma-dlg-confirm .kuma-dlg-body .kuma-confirm-content {
   margin-left: 36px;
   font-size: 12px;
   color: #666;
+  white-space: pre-wrap;
 }
 .uxcore .kuma-dlg-confirm .kuma-dlg-body .kuma-confirm-action {
   padding: 12px 0;
@@ -2289,77 +1952,125 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-tooltip-hidden {
   display: none;
 }
-.uxcore .kuma-tooltip-placement-left {
+.uxcore .kuma-tooltip-placement-left,
+.uxcore .kuma-tooltip-placement-leftTop,
+.uxcore .kuma-tooltip-placement-leftBottom {
   margin-left: -3px;
   padding: 0 5px;
 }
-.uxcore .kuma-tooltip-placement-left .kuma-tooltip-arrow {
+.uxcore .kuma-tooltip-placement-left .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-leftTop .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-leftBottom .kuma-tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   border-left-color: #e8e8e8;
 }
-.uxcore .kuma-tooltip-placement-left .kuma-tooltip-arrow:before {
+.uxcore .kuma-tooltip-placement-left .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-leftTop .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-leftBottom .kuma-tooltip-arrow:before {
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
   left: -6px;
   top: 0;
   border-left-color: #fff;
 }
-.uxcore .kuma-tooltip-placement-top {
+.uxcore .kuma-tooltip-placement-leftTop .kuma-tooltip-arrow {
+  top: 15%;
+}
+.uxcore .kuma-tooltip-placement-leftBottom .kuma-tooltip-arrow {
+  top: 85%;
+}
+.uxcore .kuma-tooltip-placement-top,
+.uxcore .kuma-tooltip-placement-topLeft,
+.uxcore .kuma-tooltip-placement-topRight {
   margin-top: -3px;
   padding: 5px 0;
 }
-.uxcore .kuma-tooltip-placement-top .kuma-tooltip-arrow {
+.uxcore .kuma-tooltip-placement-top .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-topLeft .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-topRight .kuma-tooltip-arrow {
   bottom: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #e8e8e8;
 }
-.uxcore .kuma-tooltip-placement-top .kuma-tooltip-arrow:before {
+.uxcore .kuma-tooltip-placement-top .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-topLeft .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-topRight .kuma-tooltip-arrow:before {
   margin-left: -5px;
   border-width: 5px 5px 0;
   left: 0;
   top: -6px;
   border-top-color: #fff;
 }
-.uxcore .kuma-tooltip-placement-bottom {
+.uxcore .kuma-tooltip-placement-topLeft .kuma-tooltip-arrow {
+  left: 15%;
+}
+.uxcore .kuma-tooltip-placement-topRight .kuma-tooltip-arrow {
+  left: 85%;
+}
+.uxcore .kuma-tooltip-placement-bottom,
+.uxcore .kuma-tooltip-placement-bottomLeft,
+.uxcore .kuma-tooltip-placement-bottomRight {
   margin-top: 3px;
   padding: 5px 0;
 }
-.uxcore .kuma-tooltip-placement-bottom .kuma-tooltip-arrow {
+.uxcore .kuma-tooltip-placement-bottom .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-bottomLeft .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-bottomRight .kuma-tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
   border-bottom-color: #e8e8e8;
 }
-.uxcore .kuma-tooltip-placement-bottom .kuma-tooltip-arrow:before {
+.uxcore .kuma-tooltip-placement-bottom .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-bottomLeft .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-bottomRight .kuma-tooltip-arrow:before {
   margin-left: -5px;
   border-width: 0 5px 5px;
   left: 0;
   top: 1px;
   border-bottom-color: #fff;
 }
-.uxcore .kuma-tooltip-placement-right {
+.uxcore .kuma-tooltip-placement-bottomLeft .kuma-tooltip-arrow {
+  left: 15%;
+}
+.uxcore .kuma-tooltip-placement-bottomRight .kuma-tooltip-arrow {
+  left: 85%;
+}
+.uxcore .kuma-tooltip-placement-right,
+.uxcore .kuma-tooltip-placement-rightTop,
+.uxcore .kuma-tooltip-placement-rightBottom {
   margin-left: 3px;
   padding: 0 5px;
 }
-.uxcore .kuma-tooltip-placement-right .kuma-tooltip-arrow {
+.uxcore .kuma-tooltip-placement-right .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-rightTop .kuma-tooltip-arrow,
+.uxcore .kuma-tooltip-placement-rightBottom .kuma-tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
   border-right-color: #e8e8e8;
 }
-.uxcore .kuma-tooltip-placement-right .kuma-tooltip-arrow:before {
+.uxcore .kuma-tooltip-placement-right .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-rightTop .kuma-tooltip-arrow:before,
+.uxcore .kuma-tooltip-placement-rightBottom .kuma-tooltip-arrow:before {
   margin-top: -4px;
   border-width: 5px 5px 5px 0;
   left: 1px;
   top: -1px;
   border-right-color: #fff;
+}
+.uxcore .kuma-tooltip-placement-rightTop .kuma-tooltip-arrow {
+  top: 15%;
+}
+.uxcore .kuma-tooltip-placement-rightBottom .kuma-tooltip-arrow {
+  top: 85%;
 }
 .uxcore .kuma-tooltip-arrow {
   position: absolute;
@@ -2660,16 +2371,17 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   width: 20px;
 }
 .uxcore .kuma-select2-arrow b {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
   border-color: #999 transparent transparent transparent;
   border-style: solid;
   border-width: 4px 4px 0 4px;
-  height: 0;
-  width: 0;
-  margin-left: -4px;
-  margin-top: -2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
 }
 .uxcore .kuma-select2-selection {
   outline: none;
@@ -2698,6 +2410,11 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-select2-enabled .uxcore .kuma-select2-selection:active {
   border-color: #ccc;
+}
+.uxcore .kuma-select2-selection-selected-value {
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
 }
 .uxcore .kuma-select2-selection--single {
   height: 36px;
@@ -2781,11 +2498,12 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   top: 0;
   opacity: 0.4;
   filter: "alpha(opacity=40)";
+  width: 100%;
 }
 .uxcore .kuma-select2-search--inline > i {
   float: right;
 }
-.uxcore .kuma-select2-enabled.uxcore .kuma-select2-selection--multiple {
+.uxcore .kuma-select2-enabled.kuma-select2-selection--multiple {
   cursor: text;
 }
 .uxcore .kuma-select2-selection--multiple {
@@ -2828,7 +2546,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   margin-left: -8px;
   margin-right: 8px;
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice {
+.uxcore .kuma-select2 .kuma-select2-selection__choice {
   background-color: #f3f3f3;
   border-radius: 4px;
   float: left;
@@ -2838,14 +2556,14 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   overflow: hidden;
   transition: padding 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045), width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice__content {
+.uxcore .kuma-select2 .kuma-select2-selection__choice__content {
   margin-left: 0;
   margin-right: 0;
   transition: margin 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-enter,
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-appear,
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-leave {
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-enter,
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-appear,
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-leave {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
   -webkit-animation-fill-mode: both;
@@ -2858,19 +2576,19 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
           animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-leave {
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-leave {
   opacity: 1;
   -webkit-animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
           animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-enter.kuma-select2-selection__choice-zoom-enter-active,
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-appear.kuma-select2-selection__choice-zoom-appear-active {
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-enter.kuma-select2-selection__choice-zoom-enter-active,
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-appear.kuma-select2-selection__choice-zoom-appear-active {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-animation-name: rcSelectChoiceZoomIn;
           animation-name: rcSelectChoiceZoomIn;
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice-zoom-leave.kuma-select2-selection__choice-zoom-leave-active {
+.uxcore .kuma-select2 .kuma-select2-selection__choice-zoom-leave.kuma-select2-selection__choice-zoom-leave-active {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-animation-name: rcSelectChoiceZoomOut;
@@ -2914,7 +2632,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
     opacity: 0;
   }
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice__remove {
+.uxcore .kuma-select2 .kuma-select2-selection__choice__remove {
   color: #919191;
   cursor: pointer;
   font-weight: bold;
@@ -2929,10 +2647,10 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   transition: opacity .3s, transform .3s;
   transition: opacity .3s, transform .3s, -webkit-transform .3s;
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice__remove:before {
+.uxcore .kuma-select2 .kuma-select2-selection__choice__remove:before {
   content: '×';
 }
-.uxcore .kuma-select2 .uxcore .kuma-select2-selection__choice__remove:hover {
+.uxcore .kuma-select2 .kuma-select2-selection__choice__remove:hover {
   color: #333;
 }
 .uxcore .kuma-select2-dropdown {
@@ -2982,8 +2700,10 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   display: block;
   padding: 7px 10px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .uxcore .kuma-select2-dropdown-menu li.kuma-select2-dropdown-menu-item-active {
   background-color: #fff9f5;
@@ -3028,7 +2748,10 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   border-color: transparent transparent #888 transparent;
   border-width: 0 4px 4px 4px;
 }
-.uxcore .kuma-select2-selected-has-icon .kuma-select2-dropdown-menu-item-selected:before {
+.uxcore .kuma-select2-selected-has-icon li.kuma-select2-dropdown-menu-item-selected {
+  padding-right: 20px;
+}
+.uxcore .kuma-select2-selected-has-icon li.kuma-select2-dropdown-menu-item-selected:before {
   content: "\e611";
   display: block;
   position: absolute;
@@ -3041,6 +2764,36 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   -webkit-text-stroke-width: .2px;
   -moz-osx-font-smoothing: grayscale;
   line-height: 32px;
+}
+.uxcore .kuma-select2-inline {
+  z-index: 2;
+}
+.uxcore .kuma-select2-inline .kuma-select2-selection {
+  border: 0 none;
+}
+.uxcore .kuma-select2-inline .kuma-select2-selection__rendered {
+  display: inline-block;
+  padding: 0 10px;
+  height: 36px;
+}
+.uxcore .kuma-select2-inline .kuma-select2-selection__placeholder {
+  position: static;
+}
+.uxcore .kuma-select2-inline .kuma-select2-selection-selected-value {
+  padding-right: 0;
+}
+.uxcore .kuma-select2-inline.kuma-select2-open .kuma-select2-selection {
+  border: 1px solid #dbdbdb;
+  border-bottom-color: #fff;
+}
+.uxcore .kuma-select2-inline .kuma-select2-arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.uxcore .kuma-select2-inline-dropdown {
+  z-index: 1;
+  box-shadow: none;
 }
 @keyframes slideUpIn {
   0% {
@@ -3173,6 +2926,14 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   visibility: visible;
   -webkit-animation-name: slideDownOut;
           animation-name: slideDownOut;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .uxcore {
+    /* IE10/11-specific styles go here */
+  }
+  .uxcore .kuma-select2-selection--multiple .kuma-select2-search--inline .kuma-select2-search__field {
+    width: 50px!important;
+  }
 }
 .uxcore .kuma-tab {
   border: 1px solid #dbdbdb;
@@ -3467,8 +3228,8 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-uxtable-cell input.kuma-input {
   vertical-align: top;
   padding: 0 10px;
-  margin-top: 8px;
-  height: 34px;
+  margin-top: 7px;
+  height: 36px;
 }
 .uxcore .kuma-uxtable-cell .kuma-column-picker {
   cursor: pointer;
@@ -3479,19 +3240,22 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-uxtable-cell .kuma-select2 {
   width: 100%;
   vertical-align: top;
-  margin-top: 8px;
+  margin-top: 7px;
 }
 .uxcore .kuma-uxtable-row.multiline .kuma-uxtable-cell {
   height: auto;
   min-height: 50px;
   line-height: inherit;
+  white-space: normal;
 }
-.uxcore .kuma-uxtable-row.multiline .kuma-uxtable-cell > div {
+.uxcore .kuma-uxtable-row.multiline .kuma-uxtable-cell .default-cell {
   white-space: normal;
   height: auto;
 }
-.uxcore .kuma-uxtable-cell-field.hasError .kuma-input {
-  border-color: red;
+.uxcore .kuma-uxtable-cell-field.hasError .kuma-input,
+.uxcore .kuma-uxtable-cell-field.hasError .kuma-select2-selection {
+  border-color: #F04631;
+  color: #F04631;
 }
 .uxcore .kuma-uxtable-header .kuma-uxtable-cell > div {
   overflow: visible;
@@ -3686,8 +3450,8 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   text-align: left;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0 1px 5px #ccc;
-  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px #dbdbdb;
+  border: 1px solid #dbdbdb;
 }
 .uxcore .kuma-dropdown-menu > li {
   margin: 0;
@@ -3710,7 +3474,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   clear: both;
   font-size: 12px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
   white-space: nowrap;
 }
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item > a {
@@ -3723,12 +3487,11 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item:hover,
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item-active,
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item-selected {
-  background-color: #f0f0f0;
+  background-color: #fff9f5;
 }
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item-disabled {
   color: #ccc;
   cursor: not-allowed;
-  pointer-events: none;
 }
 .uxcore .kuma-dropdown-menu > .uxcore .kuma-dropdown-menu-item-disabled:hover {
   color: #ccc;
@@ -3747,8 +3510,23 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   height: 1px;
   margin: 1px 0;
   overflow: hidden;
-  background-color: #e5e5e5;
+  background-color: #dbdbdb;
   line-height: 0;
+}
+.uxcore .kuma-dropdown-inline-wrap {
+  position: relative;
+  z-index: 1071;
+  display: inline-block;
+  padding: 8px 15px;
+}
+.uxcore .kuma-dropdown-inline-wrap-open {
+  border: 1px solid #dbdbdb;
+  border-bottom: 1px solid #fff;
+}
+.uxcore .kuma-dropdown-inline .kuma-dropdown-menu {
+  margin-top: -7px;
+  box-shadow: none;
+  border-radius: 0;
 }
 .uxcore .kuma-tree {
   margin: 0;
@@ -3781,7 +3559,6 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-tree li span.kuma-tree-switcher-noop,
 .uxcore .kuma-tree li span.kuma-tree-switcher,
-.uxcore .kuma-tree li span.kuma-tree-checkbox,
 .uxcore .kuma-tree li span.kuma-tree-iconEle {
   margin-right: 2px;
   width: 18px;
@@ -3794,7 +3571,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   background-color: transparent;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-image: url('https://aliwork.alicdn.com/tps/i2/TB15Y7sJFXXXXbYXpXXxPKU.FXX-130-87.png');
+  background-image: url('https://aliwork.alicdn.com/tps/TB168PeJVXXXXa1XFXXXXXXXXXX-130-87.png');
 }
 .uxcore .kuma-tree li span.kuma-tree-switcher-noop {
   background-image: none;
@@ -3828,27 +3605,6 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-tree li span.kuma-tree-switcher.kuma-tree-bottom_close {
   background-position: -94px -36px;
 }
-.uxcore .kuma-tree li span.kuma-tree-switcher.kuma-tree-noline_open {
-  background-position: -115px -72px;
-}
-.uxcore .kuma-tree li span.kuma-tree-switcher.kuma-tree-noline_close {
-  background-position: -97px -72px;
-}
-.uxcore .kuma-tree li span.kuma-tree-checkbox {
-  width: 14px;
-  height: 14px;
-  margin: 0 3px;
-  background-position: 0 0;
-}
-.uxcore .kuma-tree li span.kuma-tree-checkbox.kuma-tree-checkbox-checked {
-  background-position: -15px 0;
-}
-.uxcore .kuma-tree li span.kuma-tree-checkbox.kuma-tree-checkbox-indeterminate {
-  background-position: -15px -28px;
-}
-.uxcore .kuma-tree li span.kuma-tree-checkbox-disabled {
-  background-position: 0 -28px !important;
-}
 .uxcore .kuma-tree-child-tree {
   display: none;
 }
@@ -3860,13 +3616,70 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   color: gray;
 }
 .uxcore .kuma-tree-node-selected {
-  background-color: #f2f2f2;
+  background-color: #ffe8db;
+}
+.uxcore .use-svg .kuma-tree-switcher.kuma-tree-noline_open {
+  background: url('https://img.alicdn.com/tps/TB1IvveJVXXXXbcXFXXXXXXXXXX-14-10.svg') 50% 50% no-repeat;
+  background-size: 50% 50%;
+}
+.uxcore .use-svg .kuma-tree-switcher.kuma-tree-noline_close {
+  background: url('https://img.alicdn.com/tps/TB17BHzJVXXXXXEXXXXXXXXXXXX-10-14.svg') 50% 50% no-repeat;
+  background-size: 50% 50%;
+}
+.uxcore .use-svg .kuma-tree-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  background: url("svg/checkbox-normal.svg") no-repeat;
+}
+.uxcore .use-svg .kuma-tree-checkbox.kuma-tree-checkbox-checked {
+  background: url("svg/checkbox-checked.svg") no-repeat;
+}
+.uxcore .use-svg .kuma-tree-checkbox.kuma-tree-checkbox-checked.kuma-tree-checkbox-disabled {
+  background: url("svg/checkbox-checked-disabled.svg") no-repeat;
+}
+.uxcore .use-svg .kuma-tree-checkbox.kuma-tree-checkbox-indeterminate {
+  background: url("svg/checkbox-partial-checked.svg") no-repeat;
+}
+.uxcore .use-svg .kuma-tree-checkbox-checkbox-disabled {
+  background: url("svg/checkbox-disabled.svg") no-repeat;
+}
+.uxcore .no-svg .kuma-tree-switcher.kuma-tree-noline_open {
+  background-position: -115px -72px;
+}
+.uxcore .no-svg .kuma-tree-switcher.kuma-tree-noline_close {
+  background-position: -97px -72px;
+}
+.uxcore .no-svg .kuma-tree-checkbox {
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  background-image: url('https://aliwork.alicdn.com/tps/TB168PeJVXXXXa1XFXXXXXXXXXX-130-87.png');
+  width: 14px;
+  height: 14px;
+  background-position: 0 0;
+}
+.uxcore .no-svg .kuma-tree-checkbox.kuma-tree-checkbox-checked {
+  background-position: -15px 0;
+}
+.uxcore .no-svg .kuma-tree-checkbox.kuma-tree-checkbox-indeterminate {
+  background-position: -15px -28px;
+}
+.uxcore .no-svg .kuma-tree-checkbox-disabled {
+  background-position: 0 -28px !important;
 }
 .uxcore .kuma-mention-editor {
   padding: 7px 10px;
   border: 1px solid #333;
   border-radius: 0;
   color: #666;
+  overflow: auto;
 }
 .uxcore .kuma-mention-editor:focus {
   border-color: #288df0;
@@ -4089,9 +3902,9 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 @font-face {
   font-family: 'fileicon';
-  src: url('//at.alicdn.com/t/font_1442816980_3990257.eot');
+  src: url('https://at.alicdn.com/t/font_1442816980_3990257.eot');
   /* IE9*/
-  src: url('//at.alicdn.com/t/font_1442816980_3990257.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1442816980_3990257.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1442816980_3990257.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1442816980_3990257.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1442816980_3990257.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('https://at.alicdn.com/t/font_1442816980_3990257.woff') format('woff'), /* chrome、firefox */ url('https://at.alicdn.com/t/font_1442816980_3990257.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('https://at.alicdn.com/t/font_1442816980_3990257.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .uxcore .kuma-upload-fileicon {
@@ -4575,7 +4388,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   vertical-align: middle;
   margin: 0 5px;
   color: #ff6330;
-  font-size: 14px;
+  font-size: 24px;
 }
 .uxcore .kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap {
   display: inline-block;
@@ -4605,6 +4418,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-status.status-error {
   color: #ff6330;
+  margin-left: 5px;
 }
 .uxcore .kuma-upload-filelist.nwmode .kuma-upload-fileitem .field-info-wrap .field-status .kuma-upload-action {
   font-size: 12px;
@@ -5025,7 +4839,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   padding: 0px 20px 0px 4px;
 }
 .uxcore .kuma-uxform-field-content.view-mode {
-  padding-top: 10px;
+  padding-top: 9px;
 }
 .uxcore .kuma-uxform-field-content.has-error .kuma-input,
 .uxcore .kuma-uxform-field-content.has-error .kuma-uxform-left-icon,
@@ -5046,6 +4860,10 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-checkbox-group-uxform-field .kuma-uxform-field-content,
 .uxcore .kuma-radio-group-uxform-field .kuma-uxform-field-content {
   padding-top: 10px;
+}
+.uxcore .kuma-checkbox-group-uxform-field .kuma-uxform-field-content.view-mode,
+.uxcore .kuma-radio-group-uxform-field .kuma-uxform-field-content.view-mode {
+  padding-top: 9px;
 }
 .uxcore .kuma-cascade-date-uxform-field .kuma-calendar-picker-input {
   width: 200px;
@@ -5068,6 +4886,25 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 }
 .uxcore .kuma-search-uxform-field .kuma-select2 {
   width: 200px;
+  height: 32px;
+}
+.uxcore .kuma-search-uxform-field .kuma-select2-arrow {
+  height: 30px;
+}
+.uxcore .kuma-search-uxform-field .kuma-select2-selection--single {
+  height: 32px;
+}
+.uxcore .kuma-search-uxform-field .kuma-select2-selection--single .kuma-select2-selection__rendered {
+  line-height: 30px;
+}
+.uxcore .kuma-search-uxform-field .kuma-uxform-main-search.has-class .kuma-select2-selection {
+  border-left: none;
+}
+.uxcore .kuma-search-uxform-field .kuma-uxform-main-search .kuma-select2-selection {
+  border-right: none;
+}
+.uxcore .kuma-search-uxform-field .kuma-select2-combobox .kuma-select2-arrow {
+  display: none;
 }
 .uxcore .kuma-search-uxform-field .kuma-uxform-advanced-search {
   width: 100px;
@@ -5075,25 +4912,28 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-search-uxform-field .kuma-uxform-advanced-search .kuma-select2-selection {
   border-left: none;
 }
+.uxcore .kuma-search-uxform-field .kuma-uxform-advanced-search.kuma-select2-open .kuma-select2-selection {
+  border-left: 1px solid #dbdbdb;
+}
 .uxcore .kuma-search-uxform-field .kuma-uxform-class-search {
-  background: #fafafa;
   width: 70px;
+}
+.uxcore .kuma-search-uxform-field .kuma-uxform-class-search .kuma-select2-selection {
+  background: #fafafa;
 }
 .uxcore .kuma-search-uxform-field .kuma-uxform-class-search .kuma-select2-selection__placeholder {
   color: #333;
 }
-.uxcore .kuma-search-uxform-field .kuma-select2-selection {
-  border-right: none;
-}
-.uxcore .kuma-search-uxform-field .kuma-select2-combobox .kuma-select2-arrow {
-  display: none;
+.uxcore .kuma-search-uxform-field .kuma-uxform-advanced-search.kuma-select2-open .kuma-select2-selection,
+.uxcore .kuma-search-uxform-field .kuma-uxform-class-search.kuma-select2-open .kuma-select2-selection {
+  border-bottom: none;
 }
 .uxcore .kuma-search-uxform-field .kuma-search-uxform-field-icon {
   cursor: pointer;
   display: inline-block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   text-align: center;
   color: white;
   background: #f37327;
@@ -5105,8 +4945,16 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   border-left: none;
   background: white;
 }
+.uxcore .kuma-uxform-class-dropdown {
+  background: #fafafa;
+}
 .uxcore .kuma-uxform-class-dropdown .kuma-select2-dropdown-menu-item {
   padding: 7px 0 7px 10px;
+}
+.uxcore .kuma-uxform-class-dropdown,
+.uxcore .kuma-uxform-advanced-dropdown {
+  border-top: none;
+  box-shadow: none;
 }
 .uxcore .kuma-cascade-select-uxform-field .kuma-select2 {
   width: 200px;
@@ -5683,18 +5531,30 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   margin-right: 8px;
   top: -1px;
 }
-.uxcore .kuma-checkbox-group > label {
+.uxcore .kuma-checkbox-group-item {
   display: inline-block;
-  color: #333;
+  line-height: 16px;
 }
-.uxcore .kuma-checkbox-group > label span {
-  padding: 0px 20px 0px 4px;
-}
-.uxcore .kuma-radio-group > label {
+.uxcore .kuma-checkbox-group-item s {
+  vertical-align: top;
   display: inline-block;
 }
-.uxcore .kuma-radio-group > label span {
-  padding: 0px 20px 0px 4px;
+.uxcore .kuma-checkbox-group-item-content {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0px 20px 0px 10px;
+}
+.uxcore .kuma-radio-group-item {
+  display: inline-block;
+  line-height: 16px;
+}
+.uxcore .kuma-radio-group-item s {
+  vertical-align: top;
+}
+.uxcore .kuma-radio-group-item .kuma-radio-group-item-content {
+  padding: 0px 20px 0px 10px;
+  display: inline-block;
+  vertical-align: top;
 }
 .uxcore .kuma-layout-2c {
   margin: 0 auto;
@@ -5946,6 +5806,24 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   width: 42px;
   bottom: 20px;
   right: 140px;
+  /*.btn {
+        line-height: 20px;
+        display: block;
+        clear: both;
+        float: left;
+        overflow: hidden;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        text-align: center;
+        text-indent: -9999px;
+        background: #e0e0e0 url(https://gtms02.alicdn.com/tps/i2/TB1tsuQGXXXXXbmXXXXnHduKXXX-250-86.png) no-repeat;
+        background-position: left top;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }*/
   /* 普通尺寸，默认矩形风格 end */
   /* 普通尺寸，圆形风格 */
   /* 普通尺寸，圆形风格 end */
@@ -5955,42 +5833,60 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-totop .kuma-totop-other {
   width: 42px;
   float: left;
+  margin-top: 4px;
 }
-.uxcore .kuma-totop .btn {
-  line-height: 20px;
-  display: block;
-  clear: both;
-  float: left;
-  overflow: hidden;
+.uxcore .kuma-totop .box {
   width: 42px;
   height: 42px;
-  margin-bottom: 2px;
-  cursor: pointer;
-  text-align: center;
-  text-indent: -9999px;
-  background: #e0e0e0 url(https://gtms02.alicdn.com/tps/i2/TB1tsuQGXXXXXbmXXXXnHduKXXX-250-86.png) no-repeat;
-  background-position: left top;
+  box-sizing: border-box;
+  margin-top: 4px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
 }
-.uxcore .kuma-totop .btn:last-child {
-  margin-bottom: 0;
+.uxcore .kuma-totop .box:hover {
+  background-color: #999;
+  border-color: #999;
 }
-.uxcore .kuma-totop .gotop {
+.uxcore .kuma-totop .box:hover .box-text {
+  display: inline-block;
+}
+.uxcore .kuma-totop .box:hover .box-icon {
   display: none;
-  background-position: left top;
 }
-.uxcore .kuma-totop .gotop:hover {
-  background-position: -52px 0;
-  background-color: #b2b2b2;
+.uxcore .kuma-totop .box-window {
+  display: block;
+  text-align: center;
 }
-.uxcore .kuma-totop .gotop.show {
-  display: inline;
+.uxcore .kuma-totop .box-text {
+  display: none;
+  line-height: 42px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.uxcore .kuma-totop .box-icon {
+  font-size: 20px;
+  color: #999;
+  line-height: 42px;
+}
+.uxcore .kuma-totop .gotop-box {
+  display: none;
+  /*background-position: left top;
+        &:hover {
+            background-position: -52px 0;
+            background-color: #b2b2b2;
+        }*/
+}
+.uxcore .kuma-totop .gotop-box.show {
+  display: block;
 }
 .uxcore .kuma-totop .feedback {
-  background-position: 0 -44px;
-}
-.uxcore .kuma-totop .feedback:hover {
-  background-position: -104px -44px;
-  background-color: #b2b2b2;
+  /*background-position: 0 -44px;
+        &:hover {
+            background-position: -104px -44px;
+            background-color: #b2b2b2;
+        }*/
 }
 .uxcore .kuma-totop.mcircle .btn {
   border-radius: 42px;
@@ -6081,11 +5977,9 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   margin-right: 2px;
 }
 .uxcore .kuma-alert-icon {
-  display: inline-block;
   vertical-align: middle;
 }
 .uxcore .kuma-alert-icon + span {
-  display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
 }
@@ -6411,7 +6305,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
 .uxcore .kuma-carousel .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
+  height: 24px;
   width: 20px;
   line-height: 0px;
   font-size: 0px;
@@ -6456,63 +6350,62 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 .uxcore .kuma-carousel .slick-prev {
-  left: 20px;
+  left: 10px;
 }
 .uxcore .kuma-carousel .slick-prev[dir="rtl"] {
   left: auto;
-  right: 20px;
+  right: 10px;
+}
+.uxcore .kuma-carousel .slick-prev[dir="rtl"]:before {
+  content: "\e643";
 }
 .uxcore .kuma-carousel .slick-prev:before {
   content: "\e644";
 }
-.uxcore .kuma-carousel .slick-prev:before[dir="rtl"] {
-  content: "\e643";
-}
 .uxcore .kuma-carousel .slick-next {
-  right: 20px;
+  right: 10px;
 }
 .uxcore .kuma-carousel .slick-next[dir="rtl"] {
-  left: 20px;
+  left: 10px;
   right: auto;
+}
+.uxcore .kuma-carousel .slick-next[dir="rtl"]:before {
+  content: "\e644";
 }
 .uxcore .kuma-carousel .slick-next:before {
   content: "\e643";
 }
-.uxcore .kuma-carousel .slick-next:before[dir="rtl"] {
-  content: "\e644";
-}
-.uxcore .kuma-carousel .slick-slider {
-  margin-bottom: 30px;
-}
 .uxcore .kuma-carousel .slick-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   list-style: none;
   display: block;
-  text-align: center;
-  padding: 0;
+  text-align: right;
+  padding-right: 10px;
   width: 100%;
 }
 .uxcore .kuma-carousel .slick-dots li {
   position: relative;
   display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 0 5px;
+  height: 4px;
+  width: 8px;
+  margin-left: 4px;
   padding: 0;
+  font-size: 0px;
   cursor: pointer;
 }
 .uxcore .kuma-carousel .slick-dots li button {
   border: 0;
-  background: transparent;
+  background: #FFF;
+  opacity: .5;
+  filter: alpha(opacity=50);
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 4px;
+  width: 8px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
   color: transparent;
-  padding: 5px;
   cursor: pointer;
 }
 .uxcore .kuma-carousel .slick-dots li button:hover,
@@ -6527,9 +6420,9 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   position: absolute;
   top: 0;
   left: 0;
-  content: "\e660";
   width: 20px;
   height: 20px;
+  background: red;
   font-family: "kuma";
   font-size: 6px;
   line-height: 20px;
@@ -6539,7 +6432,7 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.uxcore .kuma-carousel .slick-dots li.slick-active button:before {
+.uxcore .kuma-carousel .slick-dots li.slick-active button {
   color: white;
   opacity: 1;
 }
@@ -7648,4 +7541,970 @@ li.uxcore .kuma-time-picker-panel-select-option-disabled:hover {
   visibility: visible;
   -webkit-animation-name: moveUpOut;
   animation-name: moveUpOut;
+}
+.uxcore .kuma-rate-item {
+  display: inline-block;
+  cursor: pointer;
+  color: #e8e8e8;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.uxcore .kuma-rate-item .kuma-icon {
+  display: inline-block;
+  font-size: 16px;
+}
+.uxcore .kuma-rate-item.active {
+  color: #f37327;
+}
+.uxcore .kuma-rate-item:hover .kuma-icon {
+  color: #fa7e37;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.uxcore .kuma-switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 64px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.uxcore .kuma-switch-inner {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 26px;
+}
+.uxcore .kuma-switch:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 1px;
+  border-radius: 50% 50%;
+  background-color: #ffffff;
+  content: " ";
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+          animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-name: rcSwitchOff;
+          animation-name: rcSwitchOff;
+}
+.uxcore .kuma-switch:hover:after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-animation-name: rcSwitchOn;
+          animation-name: rcSwitchOn;
+}
+.uxcore .kuma-switch:focus {
+  box-shadow: 0 0 0 2px #d5f1fd;
+  outline: none;
+}
+.uxcore .kuma-switch-checked {
+  border: 1px solid #f37327;
+  background-color: #f37327;
+}
+.uxcore .kuma-switch-checked .kuma-switch-inner {
+  left: 10px;
+}
+.uxcore .kuma-switch-checked:after {
+  left: 40px;
+}
+.uxcore .kuma-switch-disabled {
+  cursor: no-drop;
+  background: #e8e8e8;
+  border-color: #e8e8e8;
+}
+.uxcore .kuma-switch-disabled .kuma-switch-inner {
+  color: #ccc;
+}
+.uxcore .kuma-switch-disabled:after {
+  background: #fff;
+  -webkit-animation-name: none;
+          animation-name: none;
+  cursor: no-drop;
+}
+.uxcore .kuma-switch-disabled:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+.uxcore .kuma-switch-label {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 14px;
+  padding-left: 10px;
+  vertical-align: middle;
+  white-space: normal;
+  pointer-events: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+@-webkit-keyframes rcSwitchOn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes rcSwitchOn {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@-webkit-keyframes rcSwitchOff {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes rcSwitchOff {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.uxcore .kuma-badge {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+.uxcore .kuma-badge-count {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -10px;
+  height: 20px;
+  border-radius: 10px;
+  min-width: 20px;
+  background: #F04631;
+  border: 1px solid transparent;
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+  padding: 0 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  -webkit-transform-origin: -10% center;
+          transform-origin: -10% center;
+  z-index: 10;
+  font-family: tahoma;
+  box-shadow: 0 0 0 1px #fff;
+}
+.uxcore .kuma-badge-count a,
+.uxcore .kuma-badge-count a:hover {
+  color: #fff;
+}
+.uxcore .kuma-badge-dot {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: 0px center;
+          transform-origin: 0px center;
+  top: -4px;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background: #F04631;
+  z-index: 10;
+  box-shadow: 0 0 0 1px #fff;
+}
+.uxcore .kuma-badge-zoom-appear,
+.uxcore .kuma-badge-zoom-enter {
+  -webkit-animation: antZoomBadgeIn 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation: antZoomBadgeIn 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.uxcore .kuma-badge-zoom-leave {
+  -webkit-animation: antZoomBadgeOut 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation: antZoomBadgeOut 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.uxcore .kuma-badge-not-a-wrapper .uxcore .kuma-badge-count {
+  top: auto;
+  display: block;
+  position: relative;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+a .uxcore-count:hover {
+  background: #f36b5a;
+}
+a .uxcore-count:active {
+  background: #e4432f;
+}
+.uxcore .kuma-scroll-number {
+  overflow: hidden;
+}
+.uxcore .kuma-scroll-number-only {
+  display: inline-block;
+  transition: -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.uxcore .kuma-scroll-number.not-support-css-animation .uxcore .kuma-scroll-number-only > p {
+  display: none;
+}
+.uxcore .kuma-scroll-number.not-support-css-animation .uxcore .kuma-scroll-number-only > p.current {
+  display: block;
+}
+@-webkit-keyframes antZoomBadgeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+}
+@keyframes antZoomBadgeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+}
+@-webkit-keyframes antZoomBadgeOut {
+  0% {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+}
+@keyframes antZoomBadgeOut {
+  0% {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-50%);
+            transform: scale(0) translateX(-50%);
+  }
+}
+.uxcore .uxcore-tree-select {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #666;
+}
+.uxcore .uxcore-tree-select ul,
+.uxcore .uxcore-tree-select li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.uxcore .uxcore-tree-select-selection {
+  outline: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+  display: block;
+  background-color: #fff;
+  border-radius: 0px;
+  border: 1px solid #dbdbdb;
+}
+.uxcore .uxcore-tree-select-selection:hover {
+  border-color: #ccc;
+}
+.uxcore .uxcore-tree-select-selection:active {
+  border-color: #ccc;
+}
+.uxcore .uxcore-tree-select-focused .uxcore .uxcore-tree-select-selection {
+  border-color: #ccc;
+}
+.uxcore .uxcore-tree-select-enabled .uxcore .uxcore-tree-select-selection:hover {
+  border-color: #ccc;
+}
+.uxcore .uxcore-tree-select-enabled .uxcore .uxcore-tree-select-selection:active {
+  border-color: #ccc;
+}
+.uxcore .uxcore-tree-select-selection-selected-value {
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+}
+.uxcore .uxcore-tree-select-arrow {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  height: 32px;
+}
+.uxcore .uxcore-tree-select-arrow b {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-color: #999 transparent transparent transparent;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+}
+.uxcore .uxcore-tree-select-selection--single {
+  height: 36px;
+  cursor: pointer;
+  position: relative;
+}
+.uxcore .uxcore-tree-select-selection--single .uxcore-tree-select-selection__placeholder {
+  position: absolute;
+  top: 0;
+  color: #aaa;
+}
+.uxcore .uxcore-tree-select-selection--single .uxcore-tree-select-selection__rendered {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  padding-right: 20px;
+  line-height: 34px;
+}
+.uxcore .uxcore-tree-select-selection--single .uxcore-tree-select-selection__clear {
+  font-weight: bold;
+  position: absolute;
+  color: #999;
+  top: 7px;
+  right: 20px;
+}
+.uxcore .uxcore-tree-select-selection--single .uxcore-tree-select-selection__clear:after {
+  content: '×';
+}
+.uxcore .uxcore-tree-select-disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection {
+  background-color: #e8e8e8;
+}
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection:hover,
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection:active {
+  border-color: #dbdbdb;
+}
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection--single,
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection__choice__remove {
+  cursor: not-allowed;
+  color: #ccc;
+}
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection--single:hover,
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection__choice__remove:hover,
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection--single:active,
+.uxcore .uxcore-tree-select-disabled .uxcore-tree-select-selection__choice__remove:active {
+  border-color: #dbdbdb;
+}
+.uxcore .uxcore-tree-select-search__field__wrap {
+  display: inline-block;
+  position: relative;
+}
+.uxcore .uxcore-tree-select-search__field__placeholder {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  color: #aaa;
+}
+.uxcore .uxcore-tree-select-search--inline {
+  width: 100%;
+  position: relative;
+}
+.uxcore .uxcore-tree-select-search--inline .uxcore-tree-select-search__field__wrap {
+  width: 100%;
+}
+.uxcore .uxcore-tree-select-search--inline .uxcore-tree-select-search__field {
+  border: none;
+  font-size: 100%;
+  line-height: 16px;
+  background: transparent;
+  outline: 0;
+  width: 100%;
+}
+.uxcore .uxcore-tree-select-search--inline .uxcore-tree-select-selection-selected-value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  filter: "alpha(opacity=40)";
+  width: 100%;
+}
+.uxcore .uxcore-tree-select-search--inline > i {
+  float: right;
+}
+.uxcore .uxcore-tree-select-enabled.uxcore-tree-select-selection--multiple {
+  cursor: text;
+}
+.uxcore .uxcore-tree-select-selection--multiple {
+  min-height: 36px;
+}
+.uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-search--inline {
+  float: left;
+  width: auto;
+}
+.uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-search--inline .uxcore-tree-select-search__field {
+  width: 0.75em;
+}
+.uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-search--inline .uxcore-tree-select-search__field__wrap {
+  width: auto;
+}
+.uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-search__field__placeholder {
+  top: 9px;
+  left: 8px;
+}
+.uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-selection__rendered {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-bottom: 2px;
+}
+.uxcore .uxcore-tree-select-selection--multiple > ul > li {
+  margin-top: 4px;
+  height: 26px;
+  line-height: 26px;
+}
+.uxcore .uxcore-tree-select-enabled .uxcore-tree-select-selection__choice {
+  cursor: default;
+}
+.uxcore .uxcore-tree-select-enabled .uxcore-tree-select-selection__choice:hover .uxcore-tree-select-selection__choice__remove {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.uxcore .uxcore-tree-select-enabled .uxcore-tree-select-selection__choice:hover .uxcore-tree-select-selection__choice__content {
+  margin-left: -8px;
+  margin-right: 8px;
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice {
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  float: left;
+  padding: 0 15px;
+  margin-right: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: padding 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045), width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice__content {
+  margin-left: 0;
+  margin-right: 0;
+  transition: margin 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-enter,
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-appear,
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-leave {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  opacity: 0;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-leave {
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-enter.uxcore-tree-select-selection__choice-zoom-enter-active,
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-appear.uxcore-tree-select-selection__choice-zoom-appear-active {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-name: rcSelectChoiceZoomIn;
+          animation-name: rcSelectChoiceZoomIn;
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice-zoom-leave.uxcore-tree-select-selection__choice-zoom-leave-active {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-name: rcSelectChoiceZoomOut;
+          animation-name: rcSelectChoiceZoomOut;
+}
+@keyframes rcSelectChoiceZoomIn {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes rcSelectChoiceZoomOut {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice__remove {
+  color: #919191;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  top: 0;
+  right: 2px;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s;
+  transition: opacity .3s, transform .3s, -webkit-transform .3s;
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice__remove:before {
+  content: '×';
+}
+.uxcore .uxcore-tree-select .uxcore-tree-select-selection__choice__remove:hover {
+  color: #333;
+}
+.uxcore .uxcore-tree-select-dropdown {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0px 4px #d9d9d9;
+  border-radius: 0px;
+  box-sizing: border-box;
+  z-index: 1070;
+  left: -9999px;
+  top: -9999px;
+  position: absolute;
+  outline: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.uxcore .uxcore-tree-select-dropdown-hidden {
+  display: none;
+}
+.uxcore .uxcore-tree-select-dropdown-search {
+  display: block;
+  padding: 4px;
+}
+.uxcore .uxcore-tree-select-dropdown-search .uxcore-tree-select-search__field__wrap {
+  width: 100%;
+}
+.uxcore .uxcore-tree-select-dropdown-search .uxcore-tree-select-search__field__placeholder {
+  top: 4px;
+}
+.uxcore .uxcore-tree-select-dropdown-search .uxcore-tree-select-search__field {
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  border-radius: 0px;
+  outline: none;
+}
+.uxcore .uxcore-tree-select-dropdown-search.uxcore-tree-select-search--hide {
+  display: none;
+}
+.uxcore .uxcore-tree-select-open .uxcore-tree-select-arrow b {
+  border-color: transparent transparent #888 transparent;
+  border-width: 0 4px 4px 4px;
+}
+.uxcore .uxcore-tree-select-inline {
+  z-index: 2;
+}
+.uxcore .uxcore-tree-select-inline .uxcore-tree-select-selection {
+  border: 0 none;
+}
+.uxcore .uxcore-tree-select-inline .uxcore-tree-select-selection__rendered {
+  display: inline-block;
+  padding: 0 10px;
+  height: 36px;
+}
+.uxcore .uxcore-tree-select-inline .uxcore-tree-select-selection__placeholder {
+  position: static;
+}
+.uxcore .uxcore-tree-select-inline .uxcore-tree-select-selection-selected-value {
+  padding-right: 0;
+}
+.uxcore .uxcore-tree-select-inline.uxcore-tree-select-open .uxcore-tree-select-selection {
+  border: 1px solid #dbdbdb;
+  border-bottom-color: #fff;
+}
+.uxcore .uxcore-tree-select-inline .uxcore-tree-select-arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.uxcore .uxcore-tree-select-inline-dropdown {
+  z-index: 1;
+  box-shadow: none;
+}
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+            transform: scaleY(0.8);
+  }
+}
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-enter,
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-enter-active,
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpIn;
+          animation-name: slideUpIn;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-bottomLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideUpOut;
+          animation-name: slideUpOut;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-enter,
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-appear {
+  opacity: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-enter-active,
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-appear-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownIn;
+          animation-name: slideDownIn;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-leave {
+  opacity: 1;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+.uxcore .uxcore-tree-select-dropdown-placement-topLeft.slideUp-leave-active {
+  visibility: visible;
+  -webkit-animation-name: slideDownOut;
+          animation-name: slideDownOut;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .uxcore {
+    /* IE10/11-specific styles go here */
+  }
+  .uxcore .uxcore-tree-select-selection--multiple .uxcore-tree-select-search--inline .uxcore-tree-select-search__field {
+    width: 50px!important;
+  }
+}
+.uxcore .uxcore-tree-select-tree {
+  margin: 0;
+  padding: 5px;
+}
+.uxcore .uxcore-tree-select-tree li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+  outline: 0;
+  line-height: 18px;
+}
+.uxcore .uxcore-tree-select-tree li ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+.uxcore .uxcore-tree-select-tree li ul.uxcore-tree-select-tree-line {
+  background: url("https://t.alipayobjects.com/images/T13BtfXl0mXXXXXXXX.gif") 0 0 repeat-y;
+}
+.uxcore .uxcore-tree-select-tree li a {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  height: 18px;
+  text-decoration: none;
+  line-height: 18px;
+  vertical-align: middle;
+  color: #666;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher-noop,
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher,
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-iconEle {
+  margin-right: 2px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0 none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: url('https://aliwork.alicdn.com/tps/TB168PeJVXXXXa1XFXXXXXXXXXX-130-87.png');
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher-noop {
+  background-image: none;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher-disabled {
+  background: #fff;
+  position: relative;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher-disabled:after {
+  content: '-';
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  color: gray;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-roots_open {
+  background-position: -112px 0px;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-roots_close {
+  background-position: -94px 0px;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-center_open {
+  background-position: -112px -18px;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-center_close {
+  background-position: -94px -18px;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-bottom_open {
+  background-position: -112px -36px;
+}
+.uxcore .uxcore-tree-select-tree li span.uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-bottom_close {
+  background-position: -94px -36px;
+}
+.uxcore .uxcore-tree-select-tree-child-tree {
+  display: none;
+}
+.uxcore .uxcore-tree-select-tree-child-tree-open {
+  display: block;
+}
+.uxcore .uxcore-tree-select-tree-treenode-disabled > span,
+.uxcore .uxcore-tree-select-tree-treenode-disabled > a {
+  color: gray;
+}
+.uxcore .uxcore-tree-select-tree-node-selected {
+  background-color: #ffe8db;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-noline_open {
+  background: url('https://img.alicdn.com/tps/TB1IvveJVXXXXbcXFXXXXXXXXXX-14-10.svg') 50% 50% no-repeat;
+  background-size: 50% 50%;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-noline_close {
+  background: url('https://img.alicdn.com/tps/TB17BHzJVXXXXXEXXXXXXXXXXXX-10-14.svg') 50% 50% no-repeat;
+  background-size: 50% 50%;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  background: url("svg/checkbox-normal.svg") no-repeat;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-checkbox.uxcore-tree-select-tree-checkbox-checked {
+  background: url("svg/checkbox-checked.svg") no-repeat;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-checkbox.uxcore-tree-select-tree-checkbox-checked.uxcore-tree-select-tree-checkbox-disabled {
+  background: url("svg/checkbox-checked-disabled.svg") no-repeat;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-checkbox.uxcore-tree-select-tree-checkbox-indeterminate {
+  background: url("svg/checkbox-partial-checked.svg") no-repeat;
+}
+.uxcore .use-svg .uxcore-tree-select-tree-checkbox-checkbox-disabled {
+  background: url("svg/checkbox-disabled.svg") no-repeat;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-noline_open {
+  background-position: -115px -72px;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-switcher.uxcore-tree-select-tree-noline_close {
+  background-position: -97px -72px;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-checkbox {
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  background-image: url('https://aliwork.alicdn.com/tps/TB168PeJVXXXXa1XFXXXXXXXXXX-130-87.png');
+  width: 14px;
+  height: 14px;
+  background-position: 0 0;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-checkbox.uxcore-tree-select-tree-checkbox-checked {
+  background-position: -15px 0;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-checkbox.uxcore-tree-select-tree-checkbox-indeterminate {
+  background-position: -15px -28px;
+}
+.uxcore .no-svg .uxcore-tree-select-tree-checkbox-disabled {
+  background-position: 0 -28px !important;
+}
+.uxcore .kuma-load-more {
+  background: #f7f7f7;
+  border: 1px solid #e8e8e8;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 38px;
+  text-align: center;
+  vertical-align: top;
+}
+.uxcore .kuma-load-more-icon-loading {
+  background-image: url(data:image/gif;base64,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);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+  bottom: 1px;
+}
+.uxcore .kuma-load-more-status {
+  font-size: 14px;
+  color: #999999;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.uxcore .kuma-load-more-status:hover {
+  text-decoration: none;
+}
+.uxcore .kuma-load-more-noMore {
+  cursor: default;
 }
