@@ -92,7 +92,7 @@ class Demo extends React.Component {
             <div>
                 <h1>正常模式</h1>
                 <EmployeeSearch {...options}/>
-                <h1>带 orderNum 的模式</h1>
+                <h1>主职兼职 & 直接下属</h1>
                 <EmployeeSearch {...options2}/>
             </div>
         );
